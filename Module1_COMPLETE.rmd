@@ -1,0 +1,1318 @@
+---
+title: "Module 1 - Working with Data in R"
+author: ""
+output: 
+  learnr::tutorial:
+    progressive: true
+    allow_skip: true
+    
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(learnr)
+library(tidyverse)
+knitr::opts_chunk$set(echo = TRUE)
+
+y<-c(67.25, 65.78, 70.14, 64.36, 66.67, 70.54)
+```
+
+## 1. Getting started with R 
+
+R is an open-source statistical package that is widely used in academia, research and industry. R Studio provides a nice interface for R and provides some very useful functionality.   
+
+**You will be coding in R/R Studio and interpreting R code and output in this course. So, the purpose of the learnR Modules you will be working with this term is to give you experience with R code that may come in handy as you are working with data.** We will be using the University of Toronto JupyterHub to access the R/R Studio environment.  To access R Studio on JupyterHub, use your UTORid and password to login at https://r.datatools.utoronto.ca/. Alternatively, if you wish to install R (and RStudio) on your own machine, R is freely available for download at http://cran.r-project.org for Windows, MacOS, and Linux operating systems and RStudio is available at https://posit.co/downloads/.
+
+This activity can be done in your browser, as you go through each of the chunks. You do not need to download R/R Studio or use JupyterHub for this activity. 
+
+In this section we will be going over: 
+
+- creating objects & variables in R
+- how to use and write functions 
+- vectors & data types 
+- how to deal with missing data 
+- how to create a for loop 
+- exploring data frames 
+
+
+# 1.1 Creating objects 
+
+First, R can simply function as a calculator. Run the following lines of code to see: 
+
+```{r}
+2 + 2 
+```
+
+
+```{r}
+4 * 5
+```
+
+Values, like the ones generated above, can be assigned to create objects in R. For example: 
+
+```{r}
+t <- 5 
+
+1 + t 
+
+t^2
+
+t/2
+```
+
+It is important to note that R objects can be named pretty much anything, so long as they follow the software's naming conventions. Some suggestions in naming objects: 
+- names should be concise yet specific 
+- cannot begin with a number 
+- names are case sensitive (ie. data is not the same as Data)
+- avoid using names of existing R functions (ie. mean, sum)
+- use underscores in place of spaces 
+- try to keep your naming consistent as possible to improve readability!
+
+# 1.2 Built in functions
+
+One of the important building blocks of R code are R functions. Functions allow you to automate routine and repetitive tasks in a more powerful and efficient way than doing the task manually. The syntax to run an R function is `function(argument1, argument2, etc.)`. For example, suppose a sequence of measurements are stored in a vector called `y` in R: `[67.25, 65.78, 70.14, 64.36, 66.67, 70.54]`. We can use the function `round()` to round each of the values in `y` to specified number of decimal places. The `round()` function expects two arguments, or inputs: the measurement(s) you wish to round, and the number of decimal places to which you wish to round. Click the "Run Code" button below to store the 6 measurements in `y` and round them to 1 decimal point. Notice that first you had to create the `y` vector, using the `c()` function, which `c`oncatenates the arguments we give it into a single function.  
+```{r chunk1, exercise = TRUE, exercise.lines = 3}
+
+y<-c(67.25, 65.78, 70.14, 64.36, 66.67, 70.54) 
+round(y,1)
+
+```
+
+
+
+```{r chunk1-solution}
+y<-c(67.25, 65.78, 70.14, 64.36, 66.67, 70.54)
+round(y,1)
+```
+
+Try experimenting with the code above (e.g., try rounding to 0 decimal points, try changing, adding, or removing measurments in y), and running your revised code. You can get back to the original code by clicking on the Start Over button, or looking at the Solution.
+
+
+
+**This is your first R function!**
+
+If you are not sure about what a function does, or what arguments it expects, you can look at the R documentation that will appear in the Help tab in the lower right pane of RStudio when you use `?` or the `help()` function (with the function name as the argument) at the prompt (i.e., the `>`) in the Console tab in the bottom left pane of R Studio. For instance, typing `?round` or `help(round)` in the Console window in RStudio will open documentation on function round in the Help tab on the bottom right.
+
+It is good practice to **annotate your code** by including comments to note what is being done. However, if we type annotation text in the R Console or in an R Chunk like the ones in this document directly, the code will not run.  Instead, we can add `#` in front of the text to comment it out, so it is not considered as part of the code and it will be ignored by R when the code is run. Comments can appear on their own lines or at the end of a line of R code. See the code below for examples.
+
+We can also perform arithmetic operations such as addition (`+`), subtraction (`-`), multiplication (`*`) and division (`/`) in R and can use round brackets for order of operations. For instance, suppose the measurements stored in `y` are heights in inches, and we wish to convert them to centimeters (recall that 1 in = 2.54 cm). The following code will do this conversion and store the heights in cm in a new R object (a vector) called `y_cm` . Note that comments have been added to demonstrate how code can be annotated in R.
+
+```{r chunk2, exercise = T}
+# This is a comment
+# convert heights (in) to cm and store in y_cm
+y_cm<-y*2.54  # This is also a comment. 1 inch is 2.54 centimeters
+y_cm  # display the contents of R object ‘y_cm’
+
+```
+
+Let's try some more functions: 
+
+```{r}
+#square root
+x <- 144
+sqrt(x) 
+#mean, median, and range
+mean(y) 
+median(y)
+range(y)
+#standard deviation 
+sd(y)
+#minimum and maximum values 
+min(y)
+max(y)
+```
+
+**CODING EXERCISE**
+
+You give it a try! Suppose body temperatures (in degrees Celsius) of 5 study participants are stored in R object `tempc`. Convert these temperatures to degrees Fahrenheit, rounded to 1 decimal place and store in a new R object called `tempF` and display its contents.  Include at least one comment to annotate your code. Note that degrees F=Cx9/5+32. 
+
+The first line of code has been added to help get you started.
+
+```{r chunk3, exercise = TRUE, exercise.lines = 5}
+
+tempc<-c(38.00, 38.37, 37.86, 38.45, 38.09)
+
+
+```
+
+
+```{r chunk3-hint-1}
+# Use round brackets so that R knows to compute 
+# 9/5 before multiplying by temperature in Celsius.
+```
+
+
+```{r chunk3-solution}
+#SOLUTION
+tempc<-c(38.00, 38.37, 37.86, 38.45, 38.09)
+
+# convert temp in C to F and round to 1 decimal place
+tempF<-round(tempc*(9/5)+32,1) 
+tempF # display temps in F that were stored in tempF
+
+```
+
+You can also create your own functions that you can store. In this course, you will likely be working with functions 
+
+# 1.3 Data types and working with vectors 
+
+The most common data type in R is a vector, which is a series of values composed of either numbers or characters. We can create our own vectors by either typing all values in manually or using built in commands. 
+
+```{r}
+#example above is a manual entry 
+tempc<-c(38.00, 38.37, 37.86, 38.45, 38.09)
+```
+
+`seq` can be used to automate this process if you have a constant change between values. For example, if you want to create a variable for time for a timeseries over 25 years, it could look like this: 
+
+```{r}
+t <- seq(0, 25) #defaults to increments of 1 
+t
+```
+
+To create a sequence with different increments: 
+
+```{r}
+t <- seq(0, 25, 2.5)
+t
+```
+
+
+Vectors can also consist of characters: 
+
+```{r}
+furniture <- c('bed', 'table', 'chair', 'bookshelf')
+furniture
+```
+
+When working with characters or strings of words, use ''. 
+
+
+You can explore certain qualities of a vector using built in functions. Some of these are: 
+
+```{r}
+
+length(t)
+length(furniture) #tells how many elements are within the vector 
+
+class(t)
+class(furniture) #tells the type of element of a vector
+
+str(t)
+str(furniture) #overview of a vectors elements 
+
+```
+These functions are useful when you are working with large datasets and are performing exploratory analysis to see what types of visualizations and analysis you can perform on your data. But more on that later! 
+
+Sometimes you only want to extract certain values from a given vector. You can subset vectors to extract certain values using certain strategies: 
+
+1) indexing the vector 
+
+```{r}
+tempc<-c(38.00, 38.37, 37.86, 38.45, 38.09)
+tempc[4] #use of bracket to extract only the 4th value in the vector 
+tempc[c(4,5)] #extracts more than one value in the vector 
+```
+
+2) using conditions and logical statements 
+
+```{r}
+t <- seq(0, 25)
+t
+#if you only want to select for when t > 10
+
+t[t > 10] -> t
+t #overwriting the old vector with the new conditions 
+```
+
+
+# 1.4 Handling missing data 
+
+Missing data isn't uncommon when working with real world data, and R has built in functions to remove it (as the presence of NA values can lead to error in calculations). For example:  
+
+```{r}
+ibuprophen_dosages <- c(200, 400, NA, 800, 1000)
+mean(ibuprophen_dosages)
+```
+
+
+So, to fix this we can remove the missing values a few different ways: 
+
+```{r}
+#using na.rm = TRUE
+mean(ibuprophen_dosages, na.rm = TRUE)
+
+#extracting the values that are not missing 
+ibuprophen_dosages[!is.na(ibuprophen_dosages)]
+
+#returning the object with only complete values 
+na.omit(ibuprophen_dosages)
+
+ibuprophen_dosages[complete.cases(ibuprophen_dosages)]
+
+```
+
+
+# 1.5 For loops 
+
+In simple terms, a for loop functions by performing a certain operation for each number in a list. For loops are generally not used as much in R as in some other programming languages, but there are instances where they might be the most efficient method in dealing with certain types of data. For now, let's demonstrate the concept using an earlier example of a function:
+
+```{r}
+#making a for loop to convert temperatures from Celsius to Farenheit 
+tempc<-c(38.00, 38.37, 37.86, 38.45, 38.09)
+for (i in tempc) {
+  tempf <- c()
+  tempf <-tempc*(9/5)+32 
+}
+tempf 
+```
+
+
+Let's do another example. Say we want to make a for loop to calculate the incidence of influenza in a hypothetical population. 
+
+```{r}
+num_new_cases <- c(33, 121, 156, 325, 278, 194, 222, 98, 45, 187) 
+for ( i in num_new_cases) {
+  pop <- 500000
+  incidence <- c()
+  incidence <- (num_new_cases/pop) * 1000
+}
+
+incidence
+
+#this gives us the incidence rate per 1000 people!
+```
+
+
+In these examples, there are often simpler built in functions in R to get the same results. These were merely examples to demonstrate how a for loop functions: apply this command to every item in a vector. Examples where for loops are used regularly in epidemiology is for modeling the spread of an infectious disease in a susceptible population. We won't delve into these concepts as they go into detail beyond the scope of the course, but it is important to understand the basics of a for loop for future reference!
+
+## 2. R Packages
+
+**R packages** are collections of specialized functions and datasets developed by the R community. For this course we will rely heavily on **`tidyverse`**, a collection of R functions designed for data science. The tidyverse package has functions that will help us with data visualization (`ggplot`) and data wrangling, similar to SQL (`dplyr`).
+If an R package is *not* already installed in the R environment in which you’re working (e.g., [U of T JupyterHub](https://r.datatools.utoronto.ca/)), you need to 1. install the package, 2. load the package to use any of its R package functions.
+
+**STEP 1** - Install the package with the **`install.packages`** R function: 
+```{r chunk4, eval = F}
+install.packages("tidyverse")
+```
+
+**STEP 2** – Load the package with the **`library`** R function: 
+```{r chunk5, eval = F}
+library(tidyverse)
+```
+
+Now all R functions in the **`tidyverse`** package are available for use in your R/R Studio environment.
+
+
+## 2. Reading in Data 
+
+For this next part of the module we, are going to read in some data. 
+
+The [Canadian Cannabis Survey (CCS) ](https://open.canada.ca/data/en/dataset/2abe0796-c3e6-443b-a5c5-74e770e9fbe0) is a cross-sectional survey that collects information related to cannabis use for medical and non-medical purposes among 11,666 participants. The individuals surveyed were aged 16 years and older and represent residents of all Canadian provinces and territories. 
+
+
+Over the next couple modules, we will be working with a subset of the CCS survey data collected between April 4, 2024 and July 2, 2024. Many datasets come with data dictionaries, which provide more insight into the variables and how they are measured. For the CCS data, the data dictionary is formatted into a word document, which can be downloaded by running this line of code:
+
+```{r echo=FALSE, message=FALSE}
+download.file(
+ url = "https://github.com/AbbyFrix/HMB342-Learning-Module/raw/6df6105516b1d22d7a447f9ec21067b5aca11ca3/ccs-2024-english-pumf-codebook-and-user-guide-june-27-25.docx",
+ destfile = "ccs_data_dictionary.docx",
+ mode = "wb"
+)
+
+message("Data dictionary downloaded as 'ccs_data_dictionary.docx'")
+```
+Look in your recent downloads to find the data dictionary! 
+
+Now, onto the data set...  
+
+The CCS survey data have been saved in a comma-delimited file called `cannabis_data.csv`. The following code reads in the data using the **`read_csv`** function and stores them in an R object named by you that can be referred to later. You may call it anything as long as it abides by R naming conventions (e.g., concise, yet meaningful, use lower-case letters, separate multiple words with _ ). 
+
+```{r}
+#first, download the csv file running this code: 
+download.file(
+  url = "https://github.com/AbbyFrix/HMB342-Learning-Module/raw/main/cannabis_data.csv",
+  destfile = "cannabis_data.csv"
+)
+```
+
+```{r chunk7, message=FALSE}
+#use the read_csv function to create an object for the data - aka a dataframe
+cannabis_data <- read.csv("cannabis_data.csv") 
+```
+
+You can look at the structure of an R object (e.g., like our data set called `cannabis_data`) using the R function **`glimpse()`**. Also, **`head()`** will display the first several rows and variables in the data set. Try running the following code to compare the output.
+
+```{r chunk8, exercise = T, eval=FALSE}
+glimpse(cannabis_data)
+
+head(cannabis_data)
+```
+
+We see that the data have 11,666 rows (or observations) and 596 columns (or variables). From the **`glimpse()`** output we also see the name of each variable, the data type of each variable (e.g., `<dbl>` stands for “double precision” and is a numeric data type and `<chr>` stands for “character string” and is non-numeric data type), and the first few elements of each variable. In this dataset most of the data types are `<int>`, which stands for "integer". Integers in this case are representative of the individual responses to the unique survey questions related to each column (more on that in the data dictionary!)
+
+We can also access the number of rows (i.e., observations) and columns (i.e., variables) in the dataset this way:
+```{r chunk9}
+
+ncol(cannabis_data)
+
+nrow(cannabis_data)
+
+```
+
+## 3. Wrangling your Data
+
+# 3.1 When is a dataset considered tidy?
+
+**Tidy datasets** provide a standardized way to link the structure of a dataset (i.e., its layout) with its semantics (i.e., its meaning). Most R functions need tidy data as inputs so it’s essential that the data be set up in tidy format.
+
+- **Structure** is the form and shape of your data. Most datasets are rectangular data tables (or *data frames*) consisting of rows and columns.
+
+- **Semantics** is the meaning for the dataset. Datasets are a collection of *quantitative* and/or *qualitative* values. These values are classified in two ways — **variable** & **observation**. An observation consists of all measurements for an observational unit under study (e.g., a person, animal, location, etc.), and a variable is an attribute of the observational units (e.g., height, weight, temperature, etc.). 
+
+
+
+A dataset is tidy if:
+
+-	Each *variable* has its own *column*.
+
+-	Each *observation* has its own *row*.
+
+-	Each *value* has its own *cell*.
+
+
+
+# 3.2 Wrangling & Summarizing Data Part 1 - Categorical Data 
+
+**Data wrangling** refers to the process of getting your data into a form that facilitates data visualization and other summaries, as well as fitting statistical models.
+
+For the first part of the wrangling module, we are going to be working with categorical survey data. As a quick review, there are two types of categorical data: 
+
+- *nominal data* is categorical data that has no significant order or ranking. Using the cannabis dataset as an example, *province* would be an example of nominal data
+
+- *ordinal data* is categorical data that has a meaningful order or ranking. Using the cannabis dataset as an example, *education* would be an example of ordinal data 
+
+
+Suppose we are interested in indicators associated with increased cannabis usage (e.g. income, education level, rural vs urban communities.) Using `cannabis_data.csv`, we will work with survey data of individual cannabis usage frequency.
+
+In this next portion, we will review some common dplyr functions and how to apply them to your data wrangling. 
+
+1) *select()*
+
+Let's say we only want to use certain columns of a data frame. We saw earlier when reading in the cannabis dataset, there were tons of columns (596!!). Not all of these are necessary for the types of analysis we want to perform, so the *select()* function allows us to choose which columns we want to include:
+
+```{r}
+#selecting province, education, income, community size, and usage frequency columns
+cannabis_data %>% 
+  select(prov, education3, income_recode, community_size, use_freq_rec) -> cannabis_data
+cannabis_data
+```
+
+We now have made the dataframe to only include the columns we want to analyze! 
+
+2) *filter()* 
+
+This function can be used to choose rows based on certain criteria. Going back to the cannabis data, if we look at our data dictionary we see that non responses aren't recorded as *NA* but rather as certain numbers. We can filter the dataset to only include rows with responses: 
+
+```{r}
+cannabis_data <- cannabis_data%>% 
+  filter(if_all(everything(), ~ . != -7)) %>%
+  filter(if_all(everything(), ~ . != -8))
+head(cannabis_data)
+#this filters out rows where there was non-response across any of the variables
+
+#filter can also be used if we only want to look at a certain subset! For example, if we only wanted to look at the observations within the province of Ontario, we could filter for this criteria: 
+
+cannabis_data %>%
+  filter(prov == 7) #now we only would see survey responses from Ontario!
+```
+
+
+At this point, you might notice the `%>%` between different lines of code. Here, we performed a sequence of multiple operations using a **pipe**, `%>%`. This sends the output of a function directly as the input for the other function. 
+
+
+3) *group_by()*
+
+Often in analyzing epidemiological data, we are interested in differences between groups. For example, social differences between groups such as income or access to care, or biological differences such as sex, weight, or age (not an exhaustive list!) can all have implications for the health of individuals and populations. This is where using the *group_by()* function would be appropriate. 
+
+Let's do an example. Say you wanted set up the cannabis dataset to where you could perform analysis on differences in cannabis usage frequency between income levels. 
+
+```{r}
+cannabis_data %>%
+  group_by(income_recode) -> cannabis_data
+```
+
+You can also group by multiple columns! Just add commas in between: 
+
+```{r}
+cannabis_data %>%
+  group_by(income_recode, education3)
+```
+
+4) *tally()* 
+
+In working with data and with different groups, it is common to want to know the number of observations for each factor or a combination of factors. The *tally()* function can be used to find the number of observations for a given category after using the *group_by()* function. This function is useful when working with *categorical* data. 
+
+Let's say we want to know the number of individuals that belong to each province. But first, in a prior line of code, remember that we had grouped the cannabis data by income. So first let's use *ungroup()* to undo this so we can group by province instead: 
+
+```{r}
+cannabis_data %>% 
+  ungroup(income_recode) %>%
+  group_by(prov) %>%
+  tally()
+```
+
+The above line of code tells us how many survey responses come from each province! 
+
+# 3.3 Wrangling & Summarizing Data Part 2 - Numerical Data 
+
+For the next part of the module, we are going to be working with some numerical data. 
+
+As a quick review, there are two types of numerical data: 
+
+- *discrete data* encompasses countable values, typically whole numbers. Hypothetical examples could be number of physicians in hospitals or number of cases of a disease
+
+- *continuous data* can take on any value within a range, which includes decimal or fractional values. Some examples could be height, weight, or temperature. 
+
+Let's get into some different data! But first, a little background on the data: 
+
+PFAS, or per- and polyfluoroalkyl substances, are synthetic chemicals found in commonly used products such as non-stick cookware, cosmetics, medical devices, textiles, and cosmetics (https://www.canada.ca/en/health-canada/services/chemicals-product-safety/per-polyfluoroalkyl-substances.html). Due to the substances strong carbon-fluorine bonds, they are extremely difficult to break down, and tend to accumulate in the environment; their exposure has been associated with several adverse outcomes related to liver, kidney, thyroid, and reproductive function, among others. 
+
+Today, we will be wrangling some data from the Environmental Protection Agency (EPA) and Environmental Working Group (EWG) monitoring the PFAS concentration in PPT (parts per trillion) across several sites in the United States (more info at https://www.ewg.org/interactive-maps/pfas_contamination/). 
+
+Use the following code to download and read in the dataset: 
+
+```{r}
+#PFAS data
+download.file(
+  url = "https://raw.githubusercontent.com/AbbyFrix/HMB342-Learning-Module/refs/heads/main/pfas_data.csv",
+  destfile = "pfas_data.csv"
+)
+```
+
+```{r}
+pfas_data <- read.csv("pfas_data.csv")
+
+glimpse(pfas_data)
+```
+
+
+For demonstrative purposes, we are only going to focus on the PFAS dataset for this section. Now that we've read in the data, let's look at some more built in functions used to wrangle data!
+
+1) *summarise()* 
+
+The summarise function is used to create a summary of a vector into a single value. One way it can be used is to summarize quantitative data within groups. 
+
+An example might be easier to understand. Looking back to our PFAS dataset, there are multiple observations/rows associated with each state (as there are multiple sample sites in each state). Let's say we are interested in finding the average PFAS (ppt) for each state; this would be one way to use the summarize function to create a new dataframe showing this: 
+
+```{r}
+pfas_data_mean <- pfas_data %>%
+  filter(Analyte == "Total PFAS") %>% #filtering to only get total PFAS
+  group_by(State) %>% 
+  summarise(mean_ppt = mean(Value..PPT.)) #this creates a new variable showing the average PFAS for each state
+```
+
+2) *arrange()*
+
+
+High levels of PFAS are associated with increases of reproductive complications, such as decreased fertility. If we wished to sort the observations in the dataset by PFAS levels, we can use **`arrange`**. By default , this sorts in ascending order, but we can use **`desc`** to sort from high to low instead. 
+
+```{r chunk14}
+pfas_data_mean %>% arrange(mean_ppt) # ascending order
+
+pfas_data_mean %>% arrange(desc(mean_ppt)) # descending order
+
+```
+
+3) *mutate()*
+
+The U.S. Environmental Protection Agency has established standards for specific PFAS compounds, with enforcable and non-enforcable maximum contamination levels for six compounds: PFOA, PFOS, PFNA, PFHxS, GenX, and PFBS. (https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas)
+
+Some of the MCL (maximum contaminant levels) outlined are: 
+
+- PFOA - 4.0ppt
+
+- PFOS - 10ppt
+
+- PFNA - 10ppt
+
+- PFHxS - 10ppt
+
+- GenX - 10ppt 
+
+Let's say we are interested in looking at PFHxA average values by state, and adding a new variable to indicate whether each state has PFHxA levels exceeding the MCL guidelines.
+
+We can use **`ifelse`** (a quicker way of doing an if and else statement) and **`mutate`** (adds a new column) to add a new variable in the dataset to indicate whether each state exceeds the MCL. 
+
+```{r chunk15}
+
+PFHxA_MCL <- pfas_data %>%
+  filter(Analyte == "PFHxA") %>% #filtering to only get PFHxA
+  group_by(State) %>% 
+  summarise(mean_pfhxa_ppt = mean(Value..PPT.)) %>%
+  mutate(high_PFHxA =ifelse(mean_pfhxa_ppt>=10.0,"yes","no"))
+
+PFHxA_MCL %>%
+  arrange() %>%
+  print(n = 46)
+
+#which states exceed the guidelines? 
+
+PFHxA_MCL %>%
+  filter(high_PFHxA == 'yes')
+
+#8 states are above the MCL for PFHxA!
+```
+
+
+# 3.4 Coding Exercise!
+
+Now, it's time for you to try your hand at what we've learned about wrangling quantitative data! 
+
+Using `pfas_data`, lets say we want to look at average PFOS levels at individual sample sites (aka Utility) instead of by state (some sites have multiple samples). Create a new data frame that returns the average PFOS by sample site. 
+
+
+```{r chunk17setup, echo=F}
+pfas_data <- read.csv("pfas_data.csv")
+```
+
+
+```{r chunk17, exercise = TRUE, exercise.lines = 5, exercise.setup="chunk17setup"}
+#mean_pfos_by_sample<- 
+  
+```
+
+
+```{r chunk17-hint-1}
+# Try the summarise function. 
+```
+
+
+
+```{r chunk17-hint-2}
+# SOLUTION
+mean_pfoa_by_sample <- pfas_data %>%
+  filter(Analyte == "PFOA") %>% #filtering to only get PFOA
+  group_by(Utility) %>% 
+  summarise(mean_pfoa_ppt = mean(Value..PPT.)) 
+
+```
+
+
+```{r,messag=FALSE, echo=FALSE, results=FALSE}
+# SOLUTION
+mean_pfoa_by_sample <- pfas_data %>%
+  filter(Analyte == "PFOA") %>% #filtering to only get PFOA
+  group_by(Utility) %>% 
+  summarise(mean_pfoa_ppt = mean(Value..PPT.)) 
+```
+
+
+# 3.5 Combining Multiple Datasets 
+
+Sometimes in working with data, one dataset does not have all of the variables or information you need to investigate the topics you are trying to explore. This is particularly pertinent with epidemiological research, as a lot of times epidemiologists have to investigate relationships between multiple variables that different organizations are responsible for measuring. For example, if you were looking at how air quality and pollution levels is related to acute respiratory infection incidence in a city, you'd likely find air quality measurements from an environmental research organization while finding respiratory infection incidence data from a public health organization. 
+
+PFAS exposure is an environmental health risk, so for this next part we will be incorporating another dataset to look at an outcome of interest (reproductive outcomes). The dataset was taken from the CDC archives, looking fertility, birth rates, and birth weights across the US for 2023 (https://data.cdc.gov/browse?category=Pregnancy+%26+Vaccination&sortBy=relevance&page=1&pageSize=20).
+
+The dataset can be downloaded by running this code: 
+```{r}
+#birth data 
+download.file(
+  url = "https://github.com/AbbyFrix/HMB342-Learning-Module/raw/main/birth_data.csv",
+  destfile = "birth_data.csv"
+)
+```
+
+
+```{r}
+birth_data <- read.csv("birth_data.csv")
+
+glimpse(birth_data)
+glimpse(pfas_data)
+unique(pfas_data$State)
+```
+
+To combine datasets correctly, it is important that the observations are matched correctly between datasets. Thus, there needs to be some shared characteristic or variable between datasets that can be used to join them together.
+
+**QUESTION**
+```{r chunk12,echo=FALSE}
+question("Which of the following variables should be used to join the pfas and birth datasets?",
+         answer("A. State (pfas) and State Abbreviation (birth)",correct = TRUE, message ="Although the different column names might be misleading, this is why it is important to pay attention to details and formatting differences between datasets.
+                You can use the unique() function to see all the unique observations within a column. If you run the code unique(pfas_data$State), you will see that this datset labels the states with abbreviations rather than their full names."), 
+         answer("B.	State (pfas) and State.of.Residence (birth).", message ="Not quite. Although the different column names might be misleading, this is why it is important to pay attention to details and formatting differences between datasets.
+                You can use the unique() function to see all the unique observations within a column. If you run the code unique(pfas_data$State), you will see that this datset uses a different naming system for the states."),
+         answer("C.	State (pfas) and State.Code (birth)", message="Not quite. Besides the fact that there is no similar state code column in the pfas dataset, it is possible that there would be discrepancies in how different organizations would derive codes representing each state. Thus, in this case it would be most appropriate to joinn datasets based on the shared variable with universally accepted naming or identification in place."),
+         allow_retry = TRUE
+)
+```
+
+
+So now we know which two columns to use. However, notice between the pfas and births datasets, even though the rows have the same shared values, the name of the columns are different. We must fix this first, and can do this using the *rename()* function. 
+
+```{r}
+#Lets change the name of the State.Abbreviation Column in birth_data to State to match pfas_data
+birth_data <- birth_data %>%
+  rename(State = State.Abbreviation)
+
+colnames(birth_data)
+colnames(pfas_data) #verifying that the column name is now shared between the datasets!
+glimpse(birth_data)
+glimpse(pfas_data)
+```
+
+
+Importantly, in performing a join correctly, it is imperative that the information is correctly representing both datasets. 
+
+For example, birth_data is grouped by state, with 51 rows, while the original pfas_data dataset has 35,323 rows based on multiple observations per state. It is not correct to apply the average birth rate of a state to every unique location within a state. This would be a classic example of the *ecological fallacy*, or making inferences about smaller units or individuals based on aggregate data. 
+
+When working with any geographical or location-based data, we have to use the same geographical unit of analysis between datasets (ie. State/Province, Municipality, Neighborhood, Postal Code, etc.) The *modifiable areal unit problem (MAUP)* is a statistical bias that can occur when there are discrepancies in how spatial boundaries are defined between datasets. The *scale effect* is one component of the MAUP, and occurs when altering the size of the scale of measurement yields different results (for example, looking at average income at the block level versus the census tract level will yield different results). Relating this back to the pfas and births datasets, it is likely that there is significant variation in the measurements at the regional/sample site and state levels respectively. 
+
+Conclusively, the *ecological fallacy* and *MAUP* are important considerations when wrangling your data for analysis and drawing inferences from your results.
+
+So now that we have renamed the State column, we can use the *join()* function to join the datasets. Let's use the total pfas mean values by state:
+
+```{r}
+glimpse(pfas_data_mean)
+
+#now join 
+pfas_births <- birth_data %>%
+  left_join(pfas_data_mean, by = "State") 
+```
+
+
+```{r}
+pfas_births <- left_join(pfas_data_mean, birth_data,
+                    by = "State")
+head(pfas_births)
+```
+
+
+By this point in the module, you have learned a little bit about R and gained some experience running and modifying code to wrangle data.
+
+This is not intended to be a comprehensive introduction to R and the **`dplyr`** package (a *grammar of data manipulation* package which is part of the `tidyverse` package), but rather to highlight the code and functions that will be useful in HMB342, and provide you with an opportunity to experience coding with them. If you would like to learn more on data wrangling in R, please see [Wickham, H, Cetinkaya-Rundel, M, & Grolemund, G (2023). R for Data Science (2e)](https://r4ds.hadley.nz/). Also, the [Data Wrangling Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) is a nice summary of the data wrangling functions that are available in the **`tidyverse`** package.
+
+In the next sections of this module, you will learn how to produce more numerical summaries and how to produce data visualizations using the **`ggplot2`** package (also part of the **`tidyverse`** package).
+
+
+## 4. Visualizing Data
+
+In this section, we will produce plots using the **`ggplot2`** package, a *grammar of graphics* package which is also part of the **`tidyverse`** package. 
+
+Any plot produced using `ggplot()` requires three main components:
+
+-	A *data frame* that contains the data (in tidy data format) to plot.
+
+- The *aesthetics* settings which set the variable mapping on the plot (e.g., what is on the x-axis and/or y-axis?).
+
+- The *geometry* that defines how the plot will be drawn (e.g., histogram, scatterplot, etc.).
+
+Then, there are many ways to customize your plots by building on the basic code. As you gain more experience with R, you will discover that there are multiple ways to do things in R, including data visualizations. But, we are focussing on **`ggplot2`** here since it is a powerful package you can use to produce impressive (and effective!) visualizations. 
+
+Let's begin with the pfas_data data:
+
+```{r}
+glimpse(pfas_data)
+
+```
+
+
+# 4.1 Plotting One Variable - Numerical Data
+
+Suppose we are interested in the distribution of total PFAS levels for the 2023 EWG/EPA PFAS data. 
+
+**QUESTION**
+```{r chunk22, echo=FALSE}
+
+question("Which of the following plots would be appropriate to visualize the distribution of total PFAS measurements? Select all that apply.",
+         answer("Histogram", correct = TRUE, message = "PFAS (ppt) levels are quantitative measurements so the plots you selected are appropriate summaries of this distribution!"),
+         answer("Barplot", message = "A barplot would not be appropriate here. We use Barplots to summarize the distribution of categorical variables. Is PFAS (ppt) categorical? Please try again."),
+        answer("Dotplot", correct = TRUE), 
+        answer("Boxplot", correct = TRUE),
+        answer("Scatterplot", message = "A scatterplot would not be appropriate. Scatterplots are appropriate when you have two quantative variables and are interested in their association. Here we have one variable - PFAS levels (ppt). Please try again."), 
+         allow_retry = TRUE
+)
+```
+
+1) *histograms* 
+
+Histograms are used to show the frequency distribution of *numerical* data within a dataset. They are useful for understanding the spread, skewness, and the presence of any outliers in the data. 
+
+Run the following code to create a histogram of PFAS levels:
+
+```{r chunk23setup, echo=FALSE}
+total_pfas_data <-pfas_data %>%
+  filter(Analyte == "Total PFAS") 
+```
+
+
+```{r chunk23, exercise = TRUE, exercise.lines = 8, exercise.setup="chunk23setup"}
+
+total_pfas_data %>% 
+  ggplot(aes(x = Value..PPT.)) +
+  geom_histogram(binwidth = 10) +
+  xlim(0, 100)
+```
+
+
+
+```{r chunk23-hint-1}
+# Here is one example:
+total_pfas_data %>% 
+  ggplot(aes(x = Value..PPT.)) +
+  geom_histogram(bins=10) +
+  xlim(0, 100)
+
+```
+
+
+2) *boxplots* and *dotplots* 
+
+
+*Boxplots* show the distribution of numerial data through statistical means rather than as frequency values. The box contains 50% of the data and is considered the middle values in the dataset, the line in the middle of the box represents the median, while the whiskers extend to the minimum and maximum values. 
+
+*Dotplots* are very similar in that they also show the distribution of the data, with each observation represented as a dot. 
+
+Even though they are similar, they are best used in different circumstances. Dotplots are best used when there are smaller 
+
+We can use `geom_boxplot` and `geom_dotplot`, respectively, to create boxplots and dotplots. 
+
+
+```{r chunk25, exercise = TRUE, exercise.lines = 5, exercise.setup="chunk23setup"}
+
+pfas_data_mean %>% 
+  ggplot(aes(y = mean_ppt)) +
+  geom_boxplot()
+
+```
+
+Note that to create this boxplot, PFAS levels were specified as y rather than x in `aes()` to maintain consistency with the boxplot format in the course. Try changing y to x in `aes()` and rerunning the code to see what happens. Sometimes you encounter boxplots that look like this as well.
+
+```{r chunk26, exercise = TRUE, exercise.lines = 5, exercise.setup="chunk23setup"}
+pfas_data_mean %>% 
+  ggplot(aes(x = mean_ppt)) +
+  geom_dotplot(binwidth = 2) 
+```
+
+Note that the vertical scale in dotplots created using `geom_dotplot` is not meaningful. The `binwidth` and `dotsize` were specified in the code above to ensure all the observations would fit on the plot. Try modifying these settings and rerunning the code.
+
+# 4.2 Plotting one Variable - Categorical Data 
+
+Suppose we are interested in the location distribution of the cannabis_data survey respondents: 
+
+**QUESTION**
+```{r chunk29, echo=FALSE}
+
+question("Which of the following plots would be appropriate to visualize how the survey respondents are distributed across provinces?", 
+        answer("Boxplot", message = "A boxplot would not be appropriate. Boxplots are appropriate summaries of distributions of quantitative variables. province is a categorical variable. Please try again."),
+        answer("Scatterplot", message = "A scatterplot would not be appropriate. Scatterplots are appropriate when you have two quantative variables and are interested in their association. Here we have one categorical variable - province. Please try again."), 
+        answer("Histogram", message = "A histogram would not be appropriate. Histograms are appropriate summaries of distributions of quantitative variables. Province is a categorical variable. Please try again."),
+         answer("Barplot", correct = TRUE, message = "Yes! prov is a categorical variable so a barplot is an appropriate summary of this distribution."), 
+         allow_retry = TRUE
+)
+```
+
+1) *barplots* 
+
+Barplots are a type of data visualization useful for comparing between groups and showing the relationship between a numerical and a categorical variable. They are highly useful for visualizing survey data!
+
+If we look at the data type for the prov column, notice it is an integer in the dataframe, but technically the integers are shortform for the categories in this instance rather than any numerical value. Thus, we can use a function we learned previously (mutate!!) to essentially convert the survey responses into categories for the bar plot!
+
+Run the following code to create a bar plot of the distribution of the provinces individuals in this cannabis_data survey fall into. *factor* can be used to convert the survey integer responses into more meaningful descriptions:
+
+
+```{r chunk30, exercise = TRUE, exercise.lines = 8, exercise.setup="chunk23setup"}
+cannabis_data %>% 
+  mutate(province = factor(prov, 
+                       levels = 1:11,
+                       labels = c("AB", "BC", "MB", 
+                                 "NB", "NL", "NS", "ON", 
+                                 "PE", "QC", "SK", "Territories"))) %>% 
+  ggplot(aes(x = province)) +
+  geom_bar()
+
+```
+
+Try changing the colour of the bins using the strategy described for histograms earlier in this section. To change the y axis to percent instead of the default of count, you can add the code  `+ scale_y_continuous(name="Percent",labels = scales::percent)` after `geom_bar()`. Give it a try!
+
+# 4.3 Plotting More than One Variable 
+
+1) Using *facet_wrap* to show visualizations by group 
+
+Suppose we were interested in comparing cannabis usage frequency for those across different income levels. We can produce visualizions comparing the distributions of recreational cannabis usage frequencies for these groups using  **`facet_wrap`**:
+
+
+```{r chunk27, exercise = TRUE, exercise.lines = 5, exercise.setup="chunk23setup"}
+
+cannabis_data %>%
+  mutate(recreational_use_frequency = factor(use_freq_rec, 
+                       levels = 1:7,
+                       labels = c("< 1 day per month", "1 day per month", "2-3 days a month", "1-2 days a week", "3-4 days a week", "5-6 days a week", "Daily"))) %>% 
+  mutate(annual_income = factor(income_recode, 
+                         levels = 1:4,
+                         labels = c("<$50k", "$50K to <$100K", 
+                                    "$100K to <$150K", ">150K "))) %>%
+  ggplot(aes(x = recreational_use_frequency)) +
+  geom_bar() + 
+  facet_wrap(~annual_income)
+
+```
+
+2) Using *boxplots* to represent multivariable data
+
+Boxplots can be used to represent comparisons among multiple groups. Let's say we are interested in looking at the different concentrations of PFAS analytes vary in the state of New Jersey: 
+
+```{r chunk28, exercise = TRUE, exercise.lines = 5, exercise.setup="chunk23setup"}
+pfas_data %>%
+  filter(State == "NJ") %>%
+  group_by(Analyte) %>%
+  ggplot(aes(x = Analyte, y = Value..PPT.)) + 
+  geom_boxplot()
+  
+```
+
+
+3) *scatterplots* 
+
+Scatter plots are data visualizations used to look at the relationship between two quantitative variables. For example, let's say we are interested in exploring the association between environmental PFAS concentrations and birth weight. We will use the joined pfas_births dataset: 
+
+```{r chunk31, exercise = TRUE, exercise.lines = 5, exercise.setup="chunk23setup"}
+
+pfas_births %>%
+  drop_na(mean_ppt, Average.Birth.Weight..grams.) %>%
+  ggplot(aes(x = mean_ppt, y = Average.Birth.Weight..grams.)) +
+  geom_point() +
+  theme_minimal() +
+  labs(
+    x = "Mean PFAS (ppt)",
+    y = "Average Birth Weight (grams)")
+  
+```
+
+From this, we can see a moderate negative association in our data, suggesting that higher PFAS exposure may be associated with lower birth weights. Statistical tests can be used to determine whether the relationship between the variables of interest is greater than what we would expect to see by chance. However, performing statistical analysis is beyond the scope of this tutorial. If you would like to draw more attention to the association, you can create a line of best fit based on the data: 
+
+
+```{r}
+pfas_births %>% 
+  ggplot(aes(x = mean_ppt, y = Average.Birth.Weight..grams.)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se = TRUE) + #se shows the standard error of the model
+  labs(x = "Mean PFAS Exposure by State (ppt)", y = "Average Birth Weight (g)") +
+  theme_minimal()
+
+```
+
+
+
+**CODING EXERCISES**
+
+Now it's time to apply the concepts we've gone over!
+
+1) Using cannabis_data, assume we want to look at the distribution of use fequency across different education levels. Write a code to produce this visualization: 
+
+```{r chunk32setup, echo=FALSE}
+cannabis_data %>%
+  mutate(recreational_use_frequency = factor(use_freq_rec, 
+                       levels = 1:7,
+                       labels = c("< 1 day per month", "1 day per month", "2-3 days a month", "1-2 days a week", "3-4 days a week", "5-6 days a week", "Daily"))) %>% 
+  mutate(education = factor(education3, 
+                         levels = 1:3,
+                         labels = c("High School or Less", "Trades or non-university diploma", "Bachelor's Degree or Higher"))) %>%
+  ggplot(aes(x = recreational_use_frequency)) +
+  geom_bar() + 
+  facet_wrap(~education)
+```
+
+
+```{r chunk32, exercise = TRUE, exercise.lines = 6, exercise.setup="chunk32setup"}
+
+
+
+```
+
+
+
+```{r chunk32-hint-1}
+# What type of data are use frequency and education level?
+```
+
+
+```{r chunk32-hint-2}
+# Recall how we rearranged the categories and frequency data 
+```
+
+
+2) Using the PFAS births data, create a data visulization of the relationship between PFAS exposure and fertility rate. 
+
+
+```{r chunk33setup, echo=FALSE}
+pfas_births %>%
+  drop_na(mean_ppt, Fertility.Rate) %>%
+  ggplot(aes(x = mean_ppt, y = Fertility.Rate)) +
+  geom_point() +
+  theme_minimal() +
+  labs(
+    x = "Mean PFAS (ppt)",
+    y = "Fertility Rate (per 1000 female population)")
+```
+
+
+```{r chunk33, exercise = TRUE, exercise.lines = 6, exercise.setup="chunk33setup"}
+
+
+
+```
+
+
+# 4.4 Spatial Data and Mapping
+
+Spatial data is often used in epidemiology and public health research. Some key applications include identifying clusters and disease hotspots, looking at environmental or geographical relationships with health outcomes, and in investigating geographic inequities in health outcomes or services. 
+
+*Chloropleth maps* use colors and shading to show a hierarchical relationship across geographic boundaries (ie. income, population density, mortality rate, etc.) and help to visualize spatial patterns. 
+
+To work with spatial data in R, first there are some necessary packages to install. While only the *maps* package will be used for the demonstration, as it is sufficient in visualizing a basic chloropleth map. The other packages below are also commonly used to map spatial data, including the *sf* package, which allows for more complex spatial data manipulation and analysis. 
+
+```{r}
+#install.packages("maps")
+#install.packages("sf")
+#install.packages("sf", type = "source")
+#install.packages("canadianmaps")
+library(maps)
+library(sf)
+library(canadianmaps)
+```
+
+
+Let's say we want to look at the PFAS exposures across the United States. First, let's load the map of the United States using the *maps* package in R. 
+
+```{r}
+states_map <- map_data("state")
+states_map 
+```
+
+We are going to need to join our PFAS data to the spatial data. But remember - to perform a join correctly in R, there must be a shared column to perform the join, and both datasets must be aggegated at the same geographcal unit. 
+
+```{r}
+states_map <- states_map %>%
+  mutate(State = state.abb[match(str_to_title(region), state.name)]) %>%
+  left_join(pfas_births, by = "State")
+```
+
+
+```{r}
+ggplot(states_map, aes(x = long, y = lat, group = group, fill = mean_ppt)) + 
+  geom_polygon(color = "black") + 
+  scale_fill_gradient(low = "yellow2", high = "red3", name = "Average PFAS Exposure by State") +
+  theme_map()
+```
+
+Gradient color schemes are great for displaying chloropleth maps, as the darker and lighter shades visually communicate the data in an intuitive way!!
+
+This section will not provide an exhaustive tutorial on spatial data anaylsis, but rather an introduction. If you are interested in learning in more depth about spatial data visualizations, the University of Toronto Map & Data Library has detailed applications of the *sf* package here: https://mdl.library.utoronto.ca/technology/tutorials/introduction-gis-using-r 
+
+
+You have run and modified R code for many plots in this section. There are plenty of other possible plots and ways to customize your visualizations. Refer to this [ggplot2 reference](https://ggplot2.tidyverse.org/reference) for more information on `ggplot()`, `aes()` settings, and the available geometries (e.g., `geom_histogram`, `geom_boxplot). Also, the [Data Visualization Cheatsheet](https://rstudio.github.io/cheatsheets/data-visualization.pdf) is a nice summary of data visualization functions that are available in the **`tidyverse`** package!!
+
+
+# 4.5 Visualizing Data Using Base R Functions - Numerical Data
+
+In the first sections, we focused on `tidyverse` functions to wrangle, summarize and visualize data. There are also some non-tidyverse functions that may come in handy. R comes built in with functions for plotting. Although they are not as popular as `ggplot`, they are still extremely useful, and in many cases, more customizeable. 
+
+When we were using `tidyverse` syntax, we took a logical, step-by-step approach to our coding through piping (`%>%`). We don't use piping with base R functions, so we need to specify the data frame to which the variables we are referring to belong. To do so, rather than just referring to the variable name, we need to use the syntax `df$var` where `df` is the data frame name, and `var` is the variable name. If you do not include the data frame name first, your code won't run. Let's use base R functions to compute the summary statistics for `pfas_data`:
+```{r}
+# summary() gives 5-number summary + mean
+summary(pfas_data$Value..PPT.) 
+
+# minimum
+min(pfas_data$Value..PPT.)
+
+# first quartile (25th percentile)
+quantile(pfas_data$Value..PPT.,0.25) 
+
+# median
+median(pfas_data$Value..PPT.)
+
+# mean
+mean(pfas_data$Value..PPT.) 
+
+# third quartile (75th percentile)
+quantile(pfas_data$Value..PPT.,0.75) 
+
+# maximum
+max(pfas_data$Value..PPT.) 
+
+# standard deviation
+sd(pfas_data$Value..PPT.) 
+
+```
+
+We can also create a stem plot for quantative variables using base R code. Let's create one:
+```{r}
+stem(pfas_data$Value..PPT.)
+```
+
+
+If we are looking for numerical summaries for more than one group:
+```{r}
+# correlation between PFAS exposure and fertility rate
+na.omit(pfas_births) -> pfas_births
+cor(pfas_births$mean_ppt, pfas_births$Fertility.Rate)
+
+# alternative way to remove NAs for cor() calculation
+cor(pfas_births$mean_ppt, pfas_births$Fertility.Rate, use="complete.obs")
+
+```
+
+
+# 4.6 Visualizing Data Using Base R Functions - Categorical Data
+
+Let's consider the recreational use frequency classifications we added to the data frame `cannabis_data` in the previous section.  Let's create summaries of the distribution of frequency classifications for these individuals:
+```{r}
+
+cannabis_data %>%
+  mutate(recreational_use_frequency = factor(use_freq_rec, 
+                       levels = 1:7,
+                       labels = c("< 1 day per month", "1 day per month", "2-3 days a month", "1-2 days a week", "3-4 days a week", "5-6 days a week", "Daily"))) %>% 
+  mutate(annual_income = factor(income_recode, 
+                         levels = 1:4,
+                         labels = c("<$50k", "$50K to <$100K", 
+                                    "$100K to <$150K", ">150K "))) -> cannabis_data
+# frequency table
+table(cannabis_data$recreational_use_frequency)
+
+# relative frequency (or proportion) table 
+prop.table(table(cannabis_data$recreational_use_frequency))
+
+# bar plots in base R
+barplot(table(cannabis_data$recreational_use_frequency)) 
+barplot(prop.table(table(cannabis_data$recreational_use_frequency))) 
+
+# pie chart (there is no ggplot pie chart!)
+pie(table(cannabis_data$recreational_use_frequency))
+
+```
+
+You can customize these plots. Use the `help()` function to obtain the R help documentation for the function you are using. An internet search for code which you can adapt to suit your needs and preferences is a good place to start too (just make sure you understand what the code is doing!).
+
+
+We can create a two-way table using `dplyr` code, but base R code is shorter. Consider variables `BMI_class` and `high_LDL`. We can produce two-way tables of counts and proportions and obtain joint distributions and conditional distributions.
+
+```{r}
+# two-way table of counts
+table(cannabis_data$annual_income,cannabis_data$recreational_use_frequency)
+
+# two-way table of proportions (joint distribution)
+prop.table(table(cannabis_data$annual_income,cannabis_data$recreational_use_frequency))
+
+# two-way table of proportions (conditional distribution given row variable)
+prop.table(table(cannabis_data$annual_income,cannabis_data$recreational_use_frequency),margin=1)
+
+# two-way table of proportions (conditional distribution given column variable)
+prop.table(table(cannabis_data$annual_income,cannabis_data$recreational_use_frequency),margin=2)
+
+```
+
+If we are interested in comparing prevalence of high LDL cholesterol across BMI classifications, we can use the second conditional distribution table above, or visualize this in a barplot or a mosaic plot:
+```{r}
+#bar plot of appropriate conditional distribution to address this question
+barplot(prop.table(table(cannabis_data$annual_income,cannabis_data$recreational_use_frequency),margin=2),legend.text=TRUE)
+
+```
+
+
+We can also create a mosaic plot for these variables using base R functions. Note that this function expects tables entered in the opposite order to the tables and bar plots above. The variable you would like the columns to represent in the mosaic plot should be entered as the rows (i.e., first variable in the table), and the variable you would like the rows to represent entered as the column (i.e., second variable in the table).
+```{r}
+# mosaic plot
+mosaicplot(table(cannabis_data$annual_income,cannabis_data$recreational_use_frequency))
+
+# add a title using 'main' argument
+mosaicplot(table(cannabis_data$annual_income,cannabis_data$recreational_use_frequency),main="Income Level Versus Recreational Cannabis Usage Frequency")
+
+```
+
+We can also compute *relative risks* and *odds ratios* to compare risk and odds of individuals falling within certain groups (income, education, etc.) also using cannabis at certain frequencies.
+
+There are no functions in base R (or `tidyverse`) to compute RR and OR. So, we need to install and load another R package - `epitools`. 
+
+```{r}
+#install.packages("epitools")
+library(epitools)
+```
+To calculate the OR and RR, we will first need to collapse our income and frequency groups into two binary outcomes each, and determine what constitutes lower vs higher income and lower vs higher frequency. 
+```{r}
+cannabis_data <- cannabis_data %>%
+  mutate(recreational_use_frequency = factor(use_freq_rec, 
+                       levels = 1:7,
+                       labels = c("< 1 day per month", "1 day per month", "2-3 days a month", 
+                                 "1-2 days a week", "3-4 days a week", "5-6 days a week", "Daily"))) %>% 
+  mutate(annual_income = factor(income_recode, 
+                         levels = 1:4,
+                         labels = c("<$50k", "$50K to <$100K", 
+                                    "$100K to <$150K", ">150K "))) %>%
+    mutate(cannabis_use_binary = case_when(
+    use_freq_rec %in% 1:3 ~ "Infrequent Usage", 
+    use_freq_rec %in% 4:7 ~ "Frequent Usage",    
+    TRUE ~ NA_character_
+  )) %>%
+
+  mutate(income_binary = case_when(
+    income_recode %in% 1:2 ~ "Lower Income", 
+    income_recode %in% 3:4 ~ "Higher Income",  
+    TRUE ~ NA_character_
+  ))
+
+```
+
+
+Now we can perform our OR and RR calculations using the package: 
+
+```{r}
+epitab(table(cannabis_data$income_binary, cannabis_data$cannabis_use_binary), 
+       method = "oddsratio")$tab
+
+epitab(table(cannabis_data$income_binary, cannabis_data$cannabis_use_binary), 
+       method = "riskratio")$tab
+```
+
+
+The fifth column is labeled either *riskratio* or *oddsratio*, depending on which method you specify in the function. The columns to the right of this will make more sense later in the course. Based on this output and these data, the odds of high frequency cannabis usage for those classified as being lower income is 1.56 times the odds those classified as being high income. And, the risk of high frequency cannabis usage for those classified as being higher income is roughly 17% lower than those in the low income group. In conclusion, lower income is associated with more frequent cannabis usage for recreational purposes.
+
+
+**CODING EXERCISE**
+
+You give it a try! Create an appropriate summaries to explore the assocation between high cannabis usage frequency and education level.
+
+```{r chunk34setup, echo=FALSE}
+cannabis_data <- cannabis_data %>%
+  mutate(education = factor(education3, 
+                         levels = 1:3,
+                         labels = c("High School or Less", "Trades or non-university diploma", "Bachelor's Degree or Higher"))) %>%
+  mutate(education_binary = case_when(
+    education3 %in% 1:2 ~ "High School/Trades", 
+    education3 == 3 ~ "Bachelors or Higher",  
+    TRUE ~ NA_character_
+  ))
+```
+
+
+```{r chunk34, exercise = TRUE, exercise.lines = 10, exercise.setup="chunk32setup"}
+
+
+
+```
+
+
+
+```{r chunk34-hint-1}
+# What type of data is this?
+```
+
+
+```{r chunk34-hint-2}
+# Review the code for cannabis use frequency and income.
+# Will any of those summaries that may work in this situation?
+```
+
+
+```{r chunk34-hint-3}
+# Here are several options:
+barplot(table(cannabis_data$education, cannabis_data$recreational_use_frequency), 
+        legend.text = TRUE, 
+        xlab = "Highest Level of Education")
+
+mosaicplot(table(cannabis_data$education, cannabis_data$recreational_use_frequency), 
+        legend.text = TRUE, 
+        xlab = "Highest Level of Education", ylab="Recreational Cannabis Usage Frequency")
+
+# Stroke in table rows and high_LDL in columns
+table(cannabis_data$education, cannabis_data$recreational_use_frequency)
+prop.table(table(cannabis_data$education, cannabis_data$recreational_use_frequency),margin=2)
+
+
+epitab(table(cannabis_data$education_binary, cannabis_data$cannabis_use_binary), method="riskratio")$tab
+epitab(table(cannabis_data$education_binary, cannabis_data$cannabis_use_binary), method="oddsratio")$tab
+
+```
+# 4.6 Design Elements and Tidying Your Visualizations 
+
+On this final section, we are going to focus on some tips for making your visualizations look polished and purposeful. 
+
+1) *Color and Visual Elements*
+
+When choosing colors for your visualizations these are some things to keep in mind: 
+
+- Choose colors that are colorblind-friendly (avoid relying solely on red-green distinctions)
+- Use a consistent color palette throughout your analysis
+- Limit your color palette to 3-5 colors maximum to avoid visual clutter
+- Use color strategically to highlight key findings, not just for decoration
+- Ensure sufficient contrast between elements for readability
+
+Let's look at an example for how to use color. First, let's explore all the color options available in R: 
+
+```{r}
+# These are the names of all the colours available in R.
+colours()
+```
+
+
+Now, let's look at how 
+
+The `binwidth` or `bins` arguments can be adjusted to change the size of the intervals the values fall under, and adjust the colour of the bins using argument(s) `color` (this is the outline colour of the bars) and/or `fill` (this is the shading of the bars) in `geom_histogram()`.
+
+
+
+Try modifying the code above to change the bins and colour of the bars and rerunning to create another version of the histogram. Experiment with these settings until you produce an effective visual of the distribution of LDL cholesterol levels for these individuals. Be mindful when picking colours: higher contrast between neighbouring colours will make it easier for the reader, especially if there are accessibility concerns, to understand your data story. 
+
+
+The `binwidth` or `bins` arguments can be adjusted to change the size of the intervals the values fall under, and adjust the colour of the bins using argument(s) `color` (this is the outline colour of the bars) and/or `fill` (this is the shading of the bars) in `geom_histogram()`.
+
+
+
+Try modifying the code above to change the bins and colour of the bars and rerunning to create another version of the histogram. Experiment with these settings until you produce an effective visual of the distribution of LDL cholesterol levels for these individuals. Be mindful when picking colours: higher contrast between neighbouring colours will make it easier for the reader, especially if there are accessibility concerns, to understand your data story. 
+
+Are you curious about what colours are available in R? If so, run the following code.
+
+```{r chunk24, exercise = TRUE, exercise.lines = 2}
+# These are the names of all the colours available in R.
+colours()
+```
+
+
+
+Legends and Labels
+
+- Place legends where they don't obstruct data points (usually top-right or bottom-right)
+Use clear, descriptive legend titles and labels
+Remove legends when they're redundant (like when you have only one data series)
+Make legend text large enough to read easily
+
+Axes and Scales
+
+Start y-axes at zero for bar charts to avoid misleading comparisons
+Use appropriate scale breaks and intervals that make sense for your data
+Label axes clearly with units of measurement included
+Rotate x-axis labels if they're too long or crowded
+Consider log scales for data spanning several orders of magnitude
+
+Typography and Text
+
+Use readable font sizes (minimum 10-12pt for most contexts)
+Keep titles concise but informative
+Remove chart junk like unnecessary gridlines, borders, or 3D effects
+Use consistent font families throughout your visualization
+
+Layout and Structure
+
+Maintain adequate white space around your plot
+Align multiple plots consistently when creating panels
+Order categorical data logically (alphabetically, by frequency, or by meaningful hierarchy)
+Consider aspect ratios that don't distort your data's story
+
+Clarity and Purpose
+
+Include a clear, descriptive title that explains what the visualization shows
+Remove unnecessary elements that don't add to understanding
+Use direct labeling on data points when possible instead of relying solely on legends
+
+# 4.7. Conclusions 
+Congratulations! Through completion of learnR module 1, you have familiarized yourself with some R code that will be useful for lab assignments, and modified and ran R code to wrangle and summarize data.
