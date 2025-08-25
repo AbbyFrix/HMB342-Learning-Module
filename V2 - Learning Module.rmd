@@ -98,7 +98,7 @@ It is good practice to **annotate your code** by including comments to note what
 
 We can also perform arithmetic operations such as addition (`+`), subtraction (`-`), multiplication (`*`) and division (`/`) in R and can use round brackets for order of operations. For instance, suppose the measurements stored in `y` are heights in inches, and we wish to convert them to centimeters (recall that 1 in = 2.54 cm). The following code will do this conversion and store the heights in cm in a new R object (a vector) called `y_cm` . Note that comments have been added to demonstrate how code can be annotated in R.
 
-```{r exercise 2 exercise = T}
+```{r exercise 2 exercise = TRUE}
 # This is a comment
 # convert heights (in) to cm and store in y_cm
 y_cm<-y*2.54  # This is also a comment. 1 inch is 2.54 centimeters
@@ -293,12 +293,12 @@ In these examples, there are often simpler built in functions in R to get the sa
 If an R package is *not* already installed in the R environment in which you’re working (e.g., [U of T JupyterHub](https://r.datatools.utoronto.ca/)), you need to 1. install the package, 2. load the package to use any of its R package functions.
 
 **STEP 1** - Install the package with the **`install.packages`** R function: 
-```{r eval = F}
+```{r eval = FALSE}
 install.packages("tidyverse")
 ```
 
 **STEP 2** – Load the package with the **`library`** R function: 
-```{r eval = F}
+```{r eval = FALSE}
 library(tidyverse)
 ```
 
@@ -314,6 +314,16 @@ The [Canadian Cannabis Survey (CCS) ](https://open.canada.ca/data/en/dataset/2ab
 
 Over the next couple modules, we will be working with a subset of the CCS survey data collected between April 4, 2024 and July 2, 2024. Many datasets come with data dictionaries, which provide more insight into the variables and how they are measured. 
 
+```{r exercise 4, exercise = TRUE, exercise.lines = 6, exercise.setup="exercise4setup"}
+cannabis_data <- read.csv("cannabis_data.csv")
+# Apply the same filtering and selection done in the main module
+cannabis_data <- cannabis_data %>% 
+  select(prov, education3, income_recode, community_size, use_freq_rec) %>%
+  filter(if_all(everything(), ~ . != -7)) %>%
+  filter(if_all(everything(), ~ . != -8))
+```
+
+
 
 ```{r message=FALSE}
 #use the read_csv function to create an object for the data - aka a dataframe
@@ -322,7 +332,7 @@ cannabis_data <- read.csv("cannabis_data.csv")
 
 You can look at the structure of an R object (e.g., like our data set called `cannabis_data`) using the R function **`glimpse()`**. Also, **`head()`** will display the first several rows and variables in the data set. Try running the following code to compare the output.
 
-```{r exercise 4, exercise = T, eval=FALSE}
+```{r exercise 4, exercise = TRUE, exercise.lines = 6}
 glimpse(cannabis_data)
 
 head(cannabis_data)
@@ -544,7 +554,7 @@ Now, it's time for you to try your hand at what we've learned about wrangling qu
 Using `pfas_data`, lets say we want to look at average PFOS levels at individual sample sites (aka Utility) instead of by state (some sites have multiple samples). Create a new data frame that returns the average PFOS by sample site. 
 
 
-```{r exercise 5 setup echo=F}
+```{r exercise5setup, echo = FALSE}
 pfas_data <- read.csv("pfas_data.csv")
 ```
 
@@ -709,8 +719,9 @@ Histograms are used to show the frequency distribution of *numerical* data withi
 
 Run the following code to create a histogram of PFAS levels:
 
-```{r exercise 8 setup echo=FALSE}
-total_pfas_data <-pfas_data %>%
+```{r exercise8setup, echo = FALSE}
+pfas_data <- read.csv("pfas_data.csv")
+total_pfas_data <- pfas_data %>%
   filter(Analyte == "Total PFAS") 
 ```
 
@@ -747,6 +758,15 @@ Even though they are similar, they are best used in different circumstances. Dot
 We can use `geom_boxplot` and `geom_dotplot`, respectively, to create boxplots and dotplots. 
 
 
+```{r exercise9setup, echo = FALSE}
+pfas_data <- read.csv("pfas_data.csv")
+pfas_data_mean <- pfas_data %>%
+  filter(Analyte == "Total PFAS") %>%
+  group_by(State) %>% 
+  summarise(mean_ppt = mean(Value..PPT.))
+```
+
+
 ```{r exercise 9, exercise = TRUE, exercise.lines = 5, exercise.setup="exercise9setup"}
 
 pfas_data_mean %>% 
@@ -756,6 +776,16 @@ pfas_data_mean %>%
 ```
 
 Note that to create this boxplot, PFAS levels were specified as y rather than x in `aes()` to maintain consistency with the boxplot format in the course. Try changing y to x in `aes()` and rerunning the code to see what happens. Sometimes you encounter boxplots that look like this as well.
+
+
+```{r exercise10setup, echo = FALSE}
+pfas_data <- read.csv("pfas_data.csv")
+pfas_data_mean <- pfas_data %>%
+  filter(Analyte == "Total PFAS") %>%
+  group_by(State) %>% 
+  summarise(mean_ppt = mean(Value..PPT.))
+```
+
 
 ```{r exercise 10, exercise = TRUE, exercise.lines = 5, exercise.setup="exercise10setup"}
 pfas_data_mean %>% 
@@ -789,6 +819,13 @@ If we look at the data type for the prov column, notice it is an integer in the 
 
 Run the following code to create a bar plot of the distribution of the provinces individuals in this cannabis_data survey fall into. *factor* can be used to convert the survey integer responses into more meaningful descriptions:
 
+```{r exercise12setup, echo = FALSE}
+cannabis_data <- read.csv("cannabis_data.csv")
+cannabis_data <- cannabis_data %>% 
+  select(prov, education3, income_recode, community_size, use_freq_rec) %>%
+  filter(if_all(everything(), ~ . != -7)) %>%
+  filter(if_all(everything(), ~ . != -8))
+```
 
 ```{r exercise 12, exercise = TRUE, exercise.lines = 8, exercise.setup="exercise12setup"}
 cannabis_data %>% 
@@ -809,6 +846,14 @@ Try changing the colour of the bins using the strategy described for histograms 
 ### 5.3.1 Using *facet_wrap* to show visualizations by group 
 
 Suppose we were interested in comparing cannabis usage frequency for those across different income levels. We can produce visualizions comparing the distributions of recreational cannabis usage frequencies for these groups using  **`facet_wrap`**:
+
+```{r exercise13setup, echo = FALSE}
+cannabis_data <- read.csv("cannabis_data.csv")
+cannabis_data <- cannabis_data %>% 
+  select(prov, education3, income_recode, community_size, use_freq_rec) %>%
+  filter(if_all(everything(), ~ . != -7)) %>%
+  filter(if_all(everything(), ~ . != -8))
+```
 
 
 ```{r exercise 13, exercise = TRUE, exercise.lines = 5, exercise.setup="exercise 13setup"}
@@ -831,6 +876,11 @@ cannabis_data %>%
 
 Boxplots can be used to represent comparisons among multiple groups. Let's say we are interested in looking at the different concentrations of PFAS analytes vary in the state of New Jersey: 
 
+```{r exercise14setup, echo = FALSE}
+pfas_data <- read.csv("pfas_data.csv")
+```
+
+
 ```{r exercise 14, exercise = TRUE, exercise.lines = 5, exercise.setup="exercise14setup"}
 pfas_data %>%
   filter(State == "NJ") %>%
@@ -844,6 +894,18 @@ pfas_data %>%
 ### 5.3.3 *scatterplots* 
 
 Scatter plots are data visualizations used to look at the relationship between two quantitative variables. For example, let's say we are interested in exploring the association between environmental PFAS concentrations and birth weight. We will use the joined pfas_births dataset: 
+
+```{r exercise15setup, echo = FALSE}
+pfas_data <- read.csv("pfas_data.csv")
+birth_data <- read.csv("birth_data.csv")
+birth_data <- birth_data %>% rename(State = State.Abbreviation)
+pfas_data_mean <- pfas_data %>%
+  filter(Analyte == "Total PFAS") %>%
+  group_by(State) %>% 
+  summarise(mean_ppt = mean(Value..PPT.))
+pfas_births <- left_join(pfas_data_mean, birth_data, by = "State")
+```
+
 
 ```{r exercise 15, exercise = TRUE, exercise.lines = 5, exercise.setup="exercise15setup"}
 
@@ -877,19 +939,21 @@ pfas_births %>%
 
 Now it's time to apply the concepts we've gone over!
 
-Using cannabis_data, assume we want to look at the distribution of use fequency across different education levels. Write a code to produce this visualization: 
+Using cannabis_data, assume we want to look at the distribution of use fequency across different education levels. Write a code to produce this visualization:
 
-```{r exercise 16 setup, echo=FALSE}
-cannabis_data %>%
+```{r exercise16setup, echo = FALSE}
+cannabis_data <- read.csv("cannabis_data.csv")
+cannabis_data <- cannabis_data %>% 
+  select(prov, education3, income_recode, community_size, use_freq_rec) %>%
+  filter(if_all(everything(), ~ . != -7)) %>%
+  filter(if_all(everything(), ~ . != -8))
+cannabis_data <- cannabis_data %>%
   mutate(recreational_use_frequency = factor(use_freq_rec, 
                        levels = 1:7,
                        labels = c("< 1 day per month", "1 day per month", "2-3 days a month", "1-2 days a week", "3-4 days a week", "5-6 days a week", "Daily"))) %>% 
   mutate(education = factor(education3, 
                          levels = 1:3,
-                         labels = c("High School or Less", "Trades or non-university diploma", "Bachelor's Degree or Higher"))) %>%
-  ggplot(aes(x = recreational_use_frequency)) +
-  geom_bar() + 
-  facet_wrap(~education)
+                         labels = c("High School or Less", "Trades or non-university diploma", "Bachelor's Degree or Higher")))
 ```
 
 
@@ -911,10 +975,37 @@ cannabis_data %>%
 ```
 
 
+```{r exercise 16 solution}
+cannabis_data %>%
+  ggplot(aes(x = recreational_use_frequency)) +
+  geom_bar() + 
+  facet_wrap(~education)
+```
+
+
 Using the PFAS births data, create a data visulization of the relationship between PFAS exposure and fertility rate. 
 
 
-```{r exercise 17 setup, echo=FALSE}
+```{r exercise17setup, echo = FALSE}
+pfas_data <- read.csv("pfas_data.csv")
+birth_data <- read.csv("birth_data.csv")
+birth_data <- birth_data %>% rename(State = State.Abbreviation)
+pfas_data_mean <- pfas_data %>%
+  filter(Analyte == "Total PFAS") %>%
+  group_by(State) %>% 
+  summarise(mean_ppt = mean(Value..PPT.))
+pfas_births <- left_join(pfas_data_mean, birth_data, by = "State")
+```
+
+
+```{r exercise 17, exercise = TRUE, exercise.lines = 6, exercise.setup="exercise17setup"}
+
+
+
+```
+
+
+```{r exercise 17 solution}
 pfas_births %>%
   drop_na(mean_ppt, Fertility.Rate) %>%
   ggplot(aes(x = mean_ppt, y = Fertility.Rate)) +
@@ -923,13 +1014,6 @@ pfas_births %>%
   labs(
     x = "Mean PFAS (ppt)",
     y = "Fertility Rate (per 1000 female population)")
-```
-
-
-```{r exercise 17, exercise = TRUE, exercise.lines = 6, exercise.setup="exercise17setup"}
-
-
-
 ```
 
 
@@ -1193,8 +1277,31 @@ The fifth column is labeled either *riskratio* or *oddsratio*, depending on whic
 
 You give it a try! Create an appropriate summaries to explore the assocation between high cannabis usage frequency and education level.
 
-```{r exercise 18 setup, echo=FALSE}
+```{r exercise18setup, echo = FALSE}
+cannabis_data <- read.csv("cannabis_data.csv")
+cannabis_data <- cannabis_data %>% 
+  select(prov, education3, income_recode, community_size, use_freq_rec) %>%
+  filter(if_all(everything(), ~ . != -7)) %>%
+  filter(if_all(everything(), ~ . != -8))
 cannabis_data <- cannabis_data %>%
+  mutate(recreational_use_frequency = factor(use_freq_rec, 
+                       levels = 1:7,
+                       labels = c("< 1 day per month", "1 day per month", "2-3 days a month", 
+                                 "1-2 days a week", "3-4 days a week", "5-6 days a week", "Daily"))) %>% 
+  mutate(annual_income = factor(income_recode, 
+                         levels = 1:4,
+                         labels = c("<$50k", "$50K to <$100K", 
+                                    "$100K to <$150K", ">150K "))) %>%
+    mutate(cannabis_use_binary = case_when(
+    use_freq_rec %in% 1:3 ~ "Infrequent Usage", 
+    use_freq_rec %in% 4:7 ~ "Frequent Usage",    
+    TRUE ~ NA_character_
+  )) %>%
+  mutate(income_binary = case_when(
+    income_recode %in% 1:2 ~ "Lower Income", 
+    income_recode %in% 3:4 ~ "Higher Income",  
+    TRUE ~ NA_character_
+  )) %>%
   mutate(education = factor(education3, 
                          levels = 1:3,
                          labels = c("High School or Less", "Trades or non-university diploma", "Bachelor's Degree or Higher"))) %>%
