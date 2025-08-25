@@ -1206,7 +1206,7 @@ cannabis_data <- cannabis_data %>%
 ```
 
 
-```{r exercise 18, exercise = TRUE, exercise.lines = 10, exercise.setup="chunk32setup"}
+```{r exercise 18, exercise = TRUE, exercise.lines = 10, exercise.setup="exercise18setup"}
 
 
 
@@ -1332,7 +1332,7 @@ Overall, and building on everything previously discussed, we want our data visua
 
 This section covers a lot of ground, so let's see what some examples would look like in practice: 
 
-```{r}
+```{r exercise 19 setup, echo=FALSE}
 total_pfas_data <-pfas_data %>%
   filter(Analyte == "Total PFAS") 
 
