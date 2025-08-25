@@ -13,9 +13,11 @@ runtime: shiny_prerendered
 library(knitr)
 library(learnr)
 library(tidyverse)
-knitr::opts_chunk$set(echo = TRUE)
-
-y<-c(67.25, 65.78, 70.14, 64.36, 66.67, 70.54)
+library(epitools)
+library(maps)
+library(sf)
+library(scales)  # for percent formatting
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
 # 1. Getting started with R 
@@ -610,7 +612,7 @@ unique(pfas_data$State)
 To combine datasets correctly, it is important that the observations are matched correctly between datasets. Thus, there needs to be some shared characteristic or variable between datasets that can be used to join them together.
 
 **QUESTION**
-```{r exercise 6 setup,echo=FALSE}
+```{r exercise6setup,echo=FALSE}
 question("Which of the following variables should be used to join the pfas and birth datasets?",
          answer("A. State (pfas) and State Abbreviation (birth)",correct = TRUE, message ="Although the different column names might be misleading, this is why it is important to pay attention to details and formatting differences between datasets.
                 You can use the unique() function to see all the unique observations within a column. If you run the code unique(pfas_data$State), you will see that this datset labels the states with abbreviations rather than their full names."), 
@@ -701,7 +703,7 @@ glimpse(pfas_data)
 Suppose we are interested in the distribution of total PFAS levels for the 2023 EWG/EPA PFAS data. 
 
 **QUESTION**
-```{r exercise 7 setup, echo=FALSE}
+```{r exercise7setup, echo=FALSE}
 
 question("Which of the following plots would be appropriate to visualize the distribution of total PFAS measurements? Select all that apply.",
          answer("Histogram", correct = TRUE, message = "PFAS (ppt) levels are quantitative measurements so the plots you selected are appropriate summaries of this distribution!"),
@@ -800,7 +802,7 @@ Note that the vertical scale in dotplots created using `geom_dotplot` is not mea
 Suppose we are interested in the location distribution of the cannabis_data survey respondents: 
 
 **QUESTION**
-```{r exercise 11 setup, echo=FALSE}
+```{r exercise11setup, echo=FALSE}
 
 question("Which of the following plots would be appropriate to visualize how the survey respondents are distributed across provinces?", 
         answer("Boxplot", message = "A boxplot would not be appropriate. Boxplots are appropriate summaries of distributions of quantitative variables. province is a categorical variable. Please try again."),
@@ -1439,7 +1441,7 @@ Overall, and building on everything previously discussed, we want our data visua
 
 This section covers a lot of ground, so let's see what some examples would look like in practice: 
 
-```{r exercise 19 setup, echo=FALSE}
+```{r exercise19setup, echo=FALSE}
 total_pfas_data <-pfas_data %>%
   filter(Analyte == "Total PFAS") 
 
