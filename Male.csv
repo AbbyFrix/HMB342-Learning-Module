@@ -1,0 +1,775 @@
+Category,Variable,Measure,Value,Group
+Incident of NMSC in 2005,0,1-4,0,Male
+Incident of NMSC in 2006,0.52,1-4,0,Male
+Incident of NMSC in 2007,0,1-4,0,Male
+Incident of NMSC in 2008,0,1-4,0.1,Male
+Incident of NMSC in 2009,0.31,1-4,0,Male
+Incident of NMSC in 2010,0,1-4,0.08,Male
+Incident of NMSC in 2011,0,1-4,0.1,Male
+Incident of NMSC in 2012,0.2,1-4,0.05,Male
+Incident of NMSC in 2013,0.09,1-4,0.1,Male
+Incident of NMSC in 2014,0,1-4,0.03,Male
+Incident of NMSC in 2015,0.06,1-4,0.1,Male
+Incident of NMSC in 2016,0.2,1-4,0.05,Male
+Incident of NMSC in 2017,0,1-4,0.1,Male
+Incident of NMSC in 2018,0.07,1-4,0.07,Male
+Incident of NMSC in 2018,0-,1-4,1-4,Male
+pop,173406,1-4,795080,Male
+case of NMSC in 2005,0,1-4,0,Male
+pop,192243,1-4,879471,Male
+case of NMSC in 2006,0.9996636,1-4,0,Male
+pop,214585,1-4,894983,Male
+case of NMSC in 2007,0,1-4,0,Male
+pop,230304,1-4,988089,Male
+case of NMSC in 2008,0,1-4,0.988089,Male
+pop,327151,1-4,1444017,Male
+case of NMSC in 2009,1.0141681,1-4,0,Male
+pop,553502,1-4,2381653,Male
+case of NMSC in 2010,0,1-4,1.9053224,Male
+pop,684618,1-4,2936828,Male
+case of NMSC in 2011,0,1-4,2.936828,Male
+pop,994252,1-4,4074266,Male
+case of NMSC in 2012,1.988504,1-4,2.037133,Male
+pop,1120183,1-4,4793423,Male
+case of NMSC in 2013,1.0081647,1-4,4.793423,Male
+pop,1492182,1-4,6311799,Male
+case of NMSC in 2014,0,1-4,1.8935397,Male
+pop,1603833,1-4,7337612,Male
+case of NMSC in 2015,0.9622998,1-4,7.337612,Male
+pop,2027078,1-4,8826047,Male
+case of NMSC in 2016,4.054156,1-4,4.4130235,Male
+pop,2465356,1-4,10544615,Male
+case of NMSC in 2017,0,1-4,10.544615,Male
+pop,2831943,1-4,12729464,Male
+case of NMSC in 2018,1.9823601,1-4,8.9106248,Male
+Incident of NMSC in 2005,0,5-9,0,Male
+Incident of NMSC in 2006,0.52,5-9,0,Male
+Incident of NMSC in 2007,0,5-9,0,Male
+Incident of NMSC in 2008,0,5-9,0,Male
+Incident of NMSC in 2009,0.31,5-9,0.05,Male
+Incident of NMSC in 2010,0,5-9,0.07,Male
+Incident of NMSC in 2011,0,5-9,0.06,Male
+Incident of NMSC in 2012,0.2,5-9,0.08,Male
+Incident of NMSC in 2013,0.09,5-9,0.07,Male
+Incident of NMSC in 2014,0,5-9,0.04,Male
+Incident of NMSC in 2015,0.06,5-9,0.07,Male
+Incident of NMSC in 2016,0.2,5-9,0.09,Male
+Incident of NMSC in 2017,0,5-9,0.09,Male
+Incident of NMSC in 2018,0.07,5-9,0.15,Male
+Incident of NMSC in 2018,0-,5-9,5-9,Male
+pop,173406,5-9,1315532,Male
+case of NMSC in 2005,0,5-9,0,Male
+pop,192243,5-9,1343415,Male
+case of NMSC in 2006,0.9996636,5-9,0,Male
+pop,214585,5-9,1333850,Male
+case of NMSC in 2007,0,5-9,0,Male
+pop,230304,5-9,1347405,Male
+case of NMSC in 2008,0,5-9,0,Male
+pop,327151,5-9,1900139,Male
+case of NMSC in 2009,1.0141681,5-9,0.9500695,Male
+pop,553502,5-9,3024624,Male
+case of NMSC in 2010,0,5-9,2.1172368,Male
+pop,684618,5-9,3538965,Male
+case of NMSC in 2011,0,5-9,2.123379,Male
+pop,994252,5-9,4762697,Male
+case of NMSC in 2012,1.988504,5-9,3.8101576,Male
+pop,1120183,5-9,5806795,Male
+case of NMSC in 2013,1.0081647,5-9,4.0647565,Male
+pop,1492182,5-9,7508364,Male
+case of NMSC in 2014,0,5-9,3.0033456,Male
+pop,1603833,5-9,8628305,Male
+case of NMSC in 2015,0.9622998,5-9,6.0398135,Male
+pop,2027078,5-9,10617166,Male
+case of NMSC in 2016,4.054156,5-9,9.5554494,Male
+pop,2465356,5-9,12744732,Male
+case of NMSC in 2017,0,5-9,11.4702588,Male
+pop,2831943,5-9,15279403,Male
+case of NMSC in 2018,1.9823601,5-9,22.9191045,Male
+Incident of NMSC in 2005,0,10-14,0.06,Male
+Incident of NMSC in 2006,0.52,10-14,0,Male
+Incident of NMSC in 2007,0,10-14,0,Male
+Incident of NMSC in 2008,0,10-14,0,Male
+Incident of NMSC in 2009,0.31,10-14,0.08,Male
+Incident of NMSC in 2010,0,10-14,0.09,Male
+Incident of NMSC in 2011,0,10-14,0.15,Male
+Incident of NMSC in 2012,0.2,10-14,0.04,Male
+Incident of NMSC in 2013,0.09,10-14,0.09,Male
+Incident of NMSC in 2014,0,10-14,0.08,Male
+Incident of NMSC in 2015,0.06,10-14,0.08,Male
+Incident of NMSC in 2016,0.2,10-14,0.08,Male
+Incident of NMSC in 2017,0,10-14,0.1,Male
+Incident of NMSC in 2018,0.07,10-14,0.15,Male
+Incident of NMSC in 2018,0-,10-14,10-14,Male
+pop,173406,10-14,1717937,Male
+case of NMSC in 2005,0,10-14,1.0307622,Male
+pop,192243,10-14,1796678,Male
+case of NMSC in 2006,0.9996636,10-14,0,Male
+pop,214585,10-14,1761150,Male
+case of NMSC in 2007,0,10-14,0,Male
+pop,230304,10-14,1783907,Male
+case of NMSC in 2008,0,10-14,0,Male
+pop,327151,10-14,2379996,Male
+case of NMSC in 2009,1.0141681,10-14,1.9039968,Male
+pop,553502,10-14,3502563,Male
+case of NMSC in 2010,0,10-14,3.1523067,Male
+pop,684618,10-14,3921585,Male
+case of NMSC in 2011,0,10-14,5.8823775,Male
+pop,994252,10-14,5062836,Male
+case of NMSC in 2012,1.988504,10-14,2.0251344,Male
+pop,1120183,10-14,5683922,Male
+case of NMSC in 2013,1.0081647,10-14,5.1155298,Male
+pop,1492182,10-14,7183868,Male
+case of NMSC in 2014,0,10-14,5.7470944,Male
+pop,1603833,10-14,7984556,Male
+case of NMSC in 2015,0.9622998,10-14,6.3876448,Male
+pop,2027078,10-14,9693183,Male
+case of NMSC in 2016,4.054156,10-14,7.7545464,Male
+pop,2465356,10-14,11546149,Male
+case of NMSC in 2017,0,10-14,11.546149,Male
+pop,2831943,10-14,14201472,Male
+case of NMSC in 2018,1.9823601,10-14,21.302208,Male
+Incident of NMSC in 2005,0,15-19,0.09,Male
+Incident of NMSC in 2006,0.52,15-19,0.18,Male
+Incident of NMSC in 2007,0,15-19,0.09,Male
+Incident of NMSC in 2008,0,15-19,0.32,Male
+Incident of NMSC in 2009,0.31,15-19,0,Male
+Incident of NMSC in 2010,0,15-19,0.08,Male
+Incident of NMSC in 2011,0,15-19,0.15,Male
+Incident of NMSC in 2012,0.2,15-19,0.06,Male
+Incident of NMSC in 2013,0.09,15-19,0.12,Male
+Incident of NMSC in 2014,0,15-19,0.13,Male
+Incident of NMSC in 2015,0.06,15-19,0.2,Male
+Incident of NMSC in 2016,0.2,15-19,0.15,Male
+Incident of NMSC in 2017,0,15-19,0.25,Male
+Incident of NMSC in 2018,0.07,15-19,0.16,Male
+Incident of NMSC in 2018,0-,15-19,15-19,Male
+pop,173406,15-19,2195880,Male
+case of NMSC in 2005,0,15-19,1.976292,Male
+pop,192243,15-19,2216555,Male
+case of NMSC in 2006,0.9996636,15-19,3.989799,Male
+pop,214585,15-19,2220957,Male
+case of NMSC in 2007,0,15-19,1.9988613,Male
+pop,230304,15-19,2207619,Male
+case of NMSC in 2008,0,15-19,7.0643808,Male
+pop,327151,15-19,2795480,Male
+case of NMSC in 2009,1.0141681,15-19,0,Male
+pop,553502,15-19,3942503,Male
+case of NMSC in 2010,0,15-19,3.1540024,Male
+pop,684618,15-19,4580296,Male
+case of NMSC in 2011,0,15-19,6.870444,Male
+pop,994252,15-19,6243621,Male
+case of NMSC in 2012,1.988504,15-19,3.7461726,Male
+pop,1120183,15-19,6949280,Male
+case of NMSC in 2013,1.0081647,15-19,8.339136,Male
+pop,1492182,15-19,8504790,Male
+case of NMSC in 2014,0,15-19,11.056227,Male
+pop,1603833,15-19,9049253,Male
+case of NMSC in 2015,0.9622998,15-19,18.098506,Male
+pop,2027078,15-19,10812109,Male
+case of NMSC in 2016,4.054156,15-19,16.2181635,Male
+pop,2465356,15-19,12216721,Male
+case of NMSC in 2017,0,15-19,30.5418025,Male
+pop,2831943,15-19,14585468,Male
+case of NMSC in 2018,1.9823601,15-19,23.3367488,Male
+Incident of NMSC in 2005,0,20-24,0.12,Male
+Incident of NMSC in 2006,0.52,20-24,0.04,Male
+Incident of NMSC in 2007,0,20-24,0.26,Male
+Incident of NMSC in 2008,0,20-24,0.27,Male
+Incident of NMSC in 2009,0.31,20-24,0.11,Male
+Incident of NMSC in 2010,0,20-24,0.13,Male
+Incident of NMSC in 2011,0,20-24,0.15,Male
+Incident of NMSC in 2012,0.2,20-24,0.12,Male
+Incident of NMSC in 2013,0.09,20-24,0.17,Male
+Incident of NMSC in 2014,0,20-24,0.17,Male
+Incident of NMSC in 2015,0.06,20-24,0.13,Male
+Incident of NMSC in 2016,0.2,20-24,0.15,Male
+Incident of NMSC in 2017,0,20-24,0.2,Male
+Incident of NMSC in 2018,0.07,20-24,0.15,Male
+Incident of NMSC in 2018,0-,20-24,20-24,Male
+pop,173406,20-24,2468195,Male
+case of NMSC in 2005,0,20-24,2.961834,Male
+pop,192243,20-24,2566537,Male
+case of NMSC in 2006,0.9996636,20-24,1.0266148,Male
+pop,214585,20-24,2722091,Male
+case of NMSC in 2007,0,20-24,7.0774366,Male
+pop,230304,20-24,2909458,Male
+case of NMSC in 2008,0,20-24,7.8555366,Male
+pop,327151,20-24,3790457,Male
+case of NMSC in 2009,1.0141681,20-24,4.1695027,Male
+pop,553502,20-24,5311134,Male
+case of NMSC in 2010,0,20-24,6.9044742,Male
+pop,684618,20-24,6037264,Male
+case of NMSC in 2011,0,20-24,9.055896,Male
+pop,994252,20-24,8380644,Male
+case of NMSC in 2012,1.988504,20-24,10.0567728,Male
+pop,1120183,20-24,9187448,Male
+case of NMSC in 2013,1.0081647,20-24,15.6186616,Male
+pop,1492182,20-24,11413925,Male
+case of NMSC in 2014,0,20-24,19.4036725,Male
+pop,1603833,20-24,11875899,Male
+case of NMSC in 2015,0.9622998,20-24,15.4386687,Male
+pop,2027078,20-24,13604438,Male
+case of NMSC in 2016,4.054156,20-24,20.406657,Male
+pop,2465356,20-24,14815642,Male
+case of NMSC in 2017,0,20-24,29.631284,Male
+pop,2831943,20-24,17702871,Male
+case of NMSC in 2018,1.9823601,20-24,26.5543065,Male
+Incident of NMSC in 2005,0,25-29,0.33,Male
+Incident of NMSC in 2006,0.52,25-29,0.38,Male
+Incident of NMSC in 2007,0,25-29,0.49,Male
+Incident of NMSC in 2008,0,25-29,0.36,Male
+Incident of NMSC in 2009,0.31,25-29,0.14,Male
+Incident of NMSC in 2010,0,25-29,0.31,Male
+Incident of NMSC in 2011,0,25-29,0.23,Male
+Incident of NMSC in 2012,0.2,25-29,0.24,Male
+Incident of NMSC in 2013,0.09,25-29,0.24,Male
+Incident of NMSC in 2014,0,25-29,0.27,Male
+Incident of NMSC in 2015,0.06,25-29,0.28,Male
+Incident of NMSC in 2016,0.2,25-29,0.3,Male
+Incident of NMSC in 2017,0,25-29,0.3,Male
+Incident of NMSC in 2018,0.07,25-29,0.32,Male
+Incident of NMSC in 2018,0-,25-29,25-29,Male
+pop,173406,25-29,2135309,Male
+case of NMSC in 2005,0,25-29,7.0465197,Male
+pop,192243,25-29,2376828,Male
+case of NMSC in 2006,0.9996636,25-29,9.0319464,Male
+pop,214585,25-29,2457773,Male
+case of NMSC in 2007,0,25-29,12.0430877,Male
+pop,230304,25-29,2787889,Male
+case of NMSC in 2008,0,25-29,10.0364004,Male
+pop,327151,25-29,3687009,Male
+case of NMSC in 2009,1.0141681,25-29,5.1618126,Male
+pop,553502,25-29,5202735,Male
+case of NMSC in 2010,0,25-29,16.1284785,Male
+pop,684618,25-29,6017399,Male
+case of NMSC in 2011,0,25-29,13.8400177,Male
+pop,994252,25-29,8188498,Male
+case of NMSC in 2012,1.988504,25-29,19.6523952,Male
+pop,1120183,25-29,9218141,Male
+case of NMSC in 2013,1.0081647,25-29,22.1235384,Male
+pop,1492182,25-29,11962976,Male
+case of NMSC in 2014,0,25-29,32.3000352,Male
+pop,1603833,25-29,13463823,Male
+case of NMSC in 2015,0.9622998,25-29,37.6987044,Male
+pop,2027078,25-29,15434056,Male
+case of NMSC in 2016,4.054156,25-29,46.302168,Male
+pop,2465356,25-29,16839085,Male
+case of NMSC in 2017,0,25-29,50.517255,Male
+pop,2831943,25-29,19615180,Male
+case of NMSC in 2018,1.9823601,25-29,62.768576,Male
+Incident of NMSC in 2005,0,30-34,0.3,Male
+Incident of NMSC in 2006,0.52,30-34,0.2,Male
+Incident of NMSC in 2007,0,30-34,0.42,Male
+Incident of NMSC in 2008,0,30-34,0.63,Male
+Incident of NMSC in 2009,0.31,30-34,0.45,Male
+Incident of NMSC in 2010,0,30-34,0.45,Male
+Incident of NMSC in 2011,0,30-34,0.3,Male
+Incident of NMSC in 2012,0.2,30-34,0.49,Male
+Incident of NMSC in 2013,0.09,30-34,0.42,Male
+Incident of NMSC in 2014,0,30-34,0.39,Male
+Incident of NMSC in 2015,0.06,30-34,0.39,Male
+Incident of NMSC in 2016,0.2,30-34,0.42,Male
+Incident of NMSC in 2017,0,30-34,0.47,Male
+Incident of NMSC in 2018,0.07,30-34,0.44,Male
+Incident of NMSC in 2018,0-,30-34,30-34,Male
+pop,173406,30-34,2297322,Male
+case of NMSC in 2005,0,30-34,6.891966,Male
+pop,192243,30-34,2464449,Male
+case of NMSC in 2006,0.9996636,30-34,4.928898,Male
+pop,214585,30-34,2363922,Male
+case of NMSC in 2007,0,30-34,9.9284724,Male
+pop,230304,30-34,2530927,Male
+case of NMSC in 2008,0,30-34,15.9448401,Male
+pop,327151,30-34,3350468,Male
+case of NMSC in 2009,1.0141681,30-34,15.077106,Male
+pop,553502,30-34,4864799,Male
+case of NMSC in 2010,0,30-34,21.8915955,Male
+pop,684618,30-34,5711938,Male
+case of NMSC in 2011,0,30-34,17.135814,Male
+pop,994252,30-34,7792141,Male
+case of NMSC in 2012,1.988504,30-34,38.1814909,Male
+pop,1120183,30-34,8709451,Male
+case of NMSC in 2013,1.0081647,30-34,36.5796942,Male
+pop,1492182,30-34,10979497,Male
+case of NMSC in 2014,0,30-34,42.8200383,Male
+pop,1603833,30-34,12246457,Male
+case of NMSC in 2015,0.9622998,30-34,47.7611823,Male
+pop,2027078,30-34,14042473,Male
+case of NMSC in 2016,4.054156,30-34,58.9783866,Male
+pop,2465356,30-34,16005637,Male
+case of NMSC in 2017,0,30-34,75.2264939,Male
+pop,2831943,30-34,19464756,Male
+case of NMSC in 2018,1.9823601,30-34,85.6449264,Male
+Incident of NMSC in 2005,0,35-39,0.63,Male
+Incident of NMSC in 2006,0.52,35-39,0.79,Male
+Incident of NMSC in 2007,0,35-39,0.53,Male
+Incident of NMSC in 2008,0,35-39,0.9,Male
+Incident of NMSC in 2009,0.31,35-39,0.46,Male
+Incident of NMSC in 2010,0,35-39,0.52,Male
+Incident of NMSC in 2011,0,35-39,0.64,Male
+Incident of NMSC in 2012,0.2,35-39,0.46,Male
+Incident of NMSC in 2013,0.09,35-39,0.61,Male
+Incident of NMSC in 2014,0,35-39,0.57,Male
+Incident of NMSC in 2015,0.06,35-39,0.62,Male
+Incident of NMSC in 2016,0.2,35-39,0.48,Male
+Incident of NMSC in 2017,0,35-39,0.51,Male
+Incident of NMSC in 2018,0.07,35-39,0.59,Male
+Incident of NMSC in 2018,0-,35-39,35-39,Male
+pop,173406,35-39,2399803,Male
+case of NMSC in 2005,0,35-39,15.1187589,Male
+pop,192243,35-39,2669541,Male
+case of NMSC in 2006,0.9996636,35-39,21.0893739,Male
+pop,214585,35-39,2665650,Male
+case of NMSC in 2007,0,35-39,14.127945,Male
+pop,230304,35-39,2886770,Male
+case of NMSC in 2008,0,35-39,25.98093,Male
+pop,327151,35-39,3687707,Male
+case of NMSC in 2009,1.0141681,35-39,16.9634522,Male
+pop,553502,35-39,5382560,Male
+case of NMSC in 2010,0,35-39,27.989312,Male
+pop,684618,35-39,6111802,Male
+case of NMSC in 2011,0,35-39,39.1155328,Male
+pop,994252,35-39,8013956,Male
+case of NMSC in 2012,1.988504,35-39,36.8641976,Male
+pop,1120183,35-39,8914855,Male
+case of NMSC in 2013,1.0081647,35-39,54.3806155,Male
+pop,1492182,35-39,11195114,Male
+case of NMSC in 2014,0,35-39,63.8121498,Male
+pop,1603833,35-39,12103610,Male
+case of NMSC in 2015,0.9622998,35-39,75.042382,Male
+pop,2027078,35-39,14671949,Male
+case of NMSC in 2016,4.054156,35-39,70.4253552,Male
+pop,2465356,35-39,16837620,Male
+case of NMSC in 2017,0,35-39,85.871862,Male
+pop,2831943,35-39,20154570,Male
+case of NMSC in 2018,1.9823601,35-39,118.911963,Male
+Incident of NMSC in 2005,0,40-44,1.25,Male
+Incident of NMSC in 2006,0.52,40-44,1.42,Male
+Incident of NMSC in 2007,0,40-44,1.21,Male
+Incident of NMSC in 2008,0,40-44,1.05,Male
+Incident of NMSC in 2009,0.31,40-44,0.61,Male
+Incident of NMSC in 2010,0,40-44,0.97,Male
+Incident of NMSC in 2011,0,40-44,0.92,Male
+Incident of NMSC in 2012,0.2,40-44,0.78,Male
+Incident of NMSC in 2013,0.09,40-44,1.03,Male
+Incident of NMSC in 2014,0,40-44,0.77,Male
+Incident of NMSC in 2015,0.06,40-44,1.05,Male
+Incident of NMSC in 2016,0.2,40-44,0.87,Male
+Incident of NMSC in 2017,0,40-44,0.86,Male
+Incident of NMSC in 2018,0.07,40-44,0.91,Male
+Incident of NMSC in 2018,0-,40-44,40-44,Male
+pop,173406,40-44,2563943,Male
+case of NMSC in 2005,0,40-44,32.0492875,Male
+pop,192243,40-44,2807802,Male
+case of NMSC in 2006,0.9996636,40-44,39.8707884,Male
+pop,214585,40-44,2737200,Male
+case of NMSC in 2007,0,40-44,33.12012,Male
+pop,230304,40-44,2863495,Male
+case of NMSC in 2008,0,40-44,30.0666975,Male
+pop,327151,40-44,3635160,Male
+case of NMSC in 2009,1.0141681,40-44,22.174476,Male
+pop,553502,40-44,5466769,Male
+case of NMSC in 2010,0,40-44,53.0276593,Male
+pop,684618,40-44,6410317,Male
+case of NMSC in 2011,0,40-44,58.9749164,Male
+pop,994252,40-44,8963360,Male
+case of NMSC in 2012,1.988504,40-44,69.914208,Male
+pop,1120183,40-44,10196645,Male
+case of NMSC in 2013,1.0081647,40-44,105.0254435,Male
+pop,1492182,40-44,12704250,Male
+case of NMSC in 2014,0,40-44,97.822725,Male
+pop,1603833,40-44,13662267,Male
+case of NMSC in 2015,0.9622998,40-44,143.4538035,Male
+pop,2027078,40-44,15943173,Male
+case of NMSC in 2016,4.054156,40-44,138.7056051,Male
+pop,2465356,40-44,17691143,Male
+case of NMSC in 2017,0,40-44,152.1438298,Male
+pop,2831943,40-44,20862589,Male
+case of NMSC in 2018,1.9823601,40-44,189.8495599,Male
+Incident of NMSC in 2005,0,45-49,1.54,Male
+Incident of NMSC in 2006,0.52,45-49,1.43,Male
+Incident of NMSC in 2007,0,45-49,1.76,Male
+Incident of NMSC in 2008,0,45-49,1.45,Male
+Incident of NMSC in 2009,0.31,45-49,1.28,Male
+Incident of NMSC in 2010,0,45-49,1.41,Male
+Incident of NMSC in 2011,0,45-49,1.28,Male
+Incident of NMSC in 2012,0.2,45-49,1.59,Male
+Incident of NMSC in 2013,0.09,45-49,1.35,Male
+Incident of NMSC in 2014,0,45-49,1.31,Male
+Incident of NMSC in 2015,0.06,45-49,1.37,Male
+Incident of NMSC in 2016,0.2,45-49,1.29,Male
+Incident of NMSC in 2017,0,45-49,1.35,Male
+Incident of NMSC in 2018,0.07,45-49,1.38,Male
+Incident of NMSC in 2018,0-,45-49,45-49,Male
+pop,173406,45-49,2461207,Male
+case of NMSC in 2005,0,45-49,37.9025878,Male
+pop,192243,45-49,2594751,Male
+case of NMSC in 2006,0.9996636,45-49,37.1049393,Male
+pop,214585,45-49,2506456,Male
+case of NMSC in 2007,0,45-49,44.1136256,Male
+pop,230304,45-49,2897277,Male
+case of NMSC in 2008,0,45-49,42.0105165,Male
+pop,327151,45-49,3744392,Male
+case of NMSC in 2009,1.0141681,45-49,47.9282176,Male
+pop,553502,45-49,5444970,Male
+case of NMSC in 2010,0,45-49,76.774077,Male
+pop,684618,45-49,6400357,Male
+case of NMSC in 2011,0,45-49,81.9245696,Male
+pop,994252,45-49,8642568,Male
+case of NMSC in 2012,1.988504,45-49,137.4168312,Male
+pop,1120183,45-49,9886294,Male
+case of NMSC in 2013,1.0081647,45-49,133.464969,Male
+pop,1492182,45-49,12564439,Male
+case of NMSC in 2014,0,45-49,164.5941509,Male
+pop,1603833,45-49,14203282,Male
+case of NMSC in 2015,0.9622998,45-49,194.5849634,Male
+pop,2027078,45-49,17236389,Male
+case of NMSC in 2016,4.054156,45-49,222.3494181,Male
+pop,2465356,45-49,19764144,Male
+case of NMSC in 2017,0,45-49,266.815944,Male
+pop,2831943,45-49,23439973,Male
+case of NMSC in 2018,1.9823601,45-49,323.4716274,Male
+Incident of NMSC in 2005,0,50-54,2.28,Male
+Incident of NMSC in 2006,0.52,50-54,2.59,Male
+Incident of NMSC in 2007,0,50-54,2.57,Male
+Incident of NMSC in 2008,0,50-54,2.95,Male
+Incident of NMSC in 2009,0.31,50-54,2.2,Male
+Incident of NMSC in 2010,0,50-54,1.7,Male
+Incident of NMSC in 2011,0,50-54,2.27,Male
+Incident of NMSC in 2012,0.2,50-54,2.41,Male
+Incident of NMSC in 2013,0.09,50-54,1.97,Male
+Incident of NMSC in 2014,0,50-54,2.1,Male
+Incident of NMSC in 2015,0.06,50-54,2.04,Male
+Incident of NMSC in 2016,0.2,50-54,2.4,Male
+Incident of NMSC in 2017,0,50-54,2.4,Male
+Incident of NMSC in 2018,0.07,50-54,2.4,Male
+Incident of NMSC in 2018,0-,50-54,50-54,Male
+pop,173406,50-54,2061242,Male
+case of NMSC in 2005,0,50-54,46.9963176,Male
+pop,192243,50-54,2319331,Male
+case of NMSC in 2006,0.9996636,50-54,60.0706729,Male
+pop,214585,50-54,2371821,Male
+case of NMSC in 2007,0,50-54,60.9557997,Male
+pop,230304,50-54,2809713,Male
+case of NMSC in 2008,0,50-54,82.8865335,Male
+pop,327151,50-54,3370296,Male
+case of NMSC in 2009,1.0141681,50-54,74.146512,Male
+pop,553502,50-54,4719319,Male
+case of NMSC in 2010,0,50-54,80.228423,Male
+pop,684618,50-54,5282669,Male
+case of NMSC in 2011,0,50-54,119.9165863,Male
+pop,994252,50-54,6974532,Male
+case of NMSC in 2012,1.988504,50-54,168.0862212,Male
+pop,1120183,50-54,8125627,Male
+case of NMSC in 2013,1.0081647,50-54,160.0748519,Male
+pop,1492182,50-54,10614514,Male
+case of NMSC in 2014,0,50-54,222.904794,Male
+pop,1603833,50-54,12370248,Male
+case of NMSC in 2015,0.9622998,50-54,252.3530592,Male
+pop,2027078,50-54,14678137,Male
+case of NMSC in 2016,4.054156,50-54,352.275288,Male
+pop,2465356,50-54,16694834,Male
+case of NMSC in 2017,0,50-54,400.676016,Male
+pop,2831943,50-54,19869722,Male
+case of NMSC in 2018,1.9823601,50-54,476.873328,Male
+Incident of NMSC in 2005,0,55-59,3.35,Male
+Incident of NMSC in 2006,0.52,55-59,2.99,Male
+Incident of NMSC in 2007,0,55-59,3.73,Male
+Incident of NMSC in 2008,0,55-59,3.85,Male
+Incident of NMSC in 2009,0.31,55-59,2.91,Male
+Incident of NMSC in 2010,0,55-59,3.34,Male
+Incident of NMSC in 2011,0,55-59,3.26,Male
+Incident of NMSC in 2012,0.2,55-59,3.22,Male
+Incident of NMSC in 2013,0.09,55-59,3.12,Male
+Incident of NMSC in 2014,0,55-59,3.68,Male
+Incident of NMSC in 2015,0.06,55-59,3.35,Male
+Incident of NMSC in 2016,0.2,55-59,3.05,Male
+Incident of NMSC in 2017,0,55-59,2.74,Male
+Incident of NMSC in 2018,0.07,55-59,3.19,Male
+Incident of NMSC in 2018,0-,55-59,55-59,Male
+pop,173406,55-59,1431317,Male
+case of NMSC in 2005,0,55-59,47.9491195,Male
+pop,192243,55-59,1607211,Male
+case of NMSC in 2006,0.9996636,55-59,48.0556089,Male
+pop,214585,55-59,1687358,Male
+case of NMSC in 2007,0,55-59,62.9384534,Male
+pop,230304,55-59,2078657,Male
+case of NMSC in 2008,0,55-59,80.0282945,Male
+pop,327151,55-59,2751754,Male
+case of NMSC in 2009,1.0141681,55-59,80.0760414,Male
+pop,553502,55-59,4126860,Male
+case of NMSC in 2010,0,55-59,137.837124,Male
+pop,684618,55-59,5024400,Male
+case of NMSC in 2011,0,55-59,163.79544,Male
+pop,994252,55-59,7069983,Male
+case of NMSC in 2012,1.988504,55-59,227.6534526,Male
+pop,1120183,55-59,8211309,Male
+case of NMSC in 2013,1.0081647,55-59,256.1928408,Male
+pop,1492182,55-59,10017016,Male
+case of NMSC in 2014,0,55-59,368.6261888,Male
+pop,1603833,55-59,10663349,Male
+case of NMSC in 2015,0.9622998,55-59,357.2221915,Male
+pop,2027078,55-59,12352675,Male
+case of NMSC in 2016,4.054156,55-59,376.7565875,Male
+pop,2465356,55-59,13778674,Male
+case of NMSC in 2017,0,55-59,377.5356676,Male
+pop,2831943,55-59,16963128,Male
+case of NMSC in 2018,1.9823601,55-59,541.1237832,Male
+Incident of NMSC in 2005,0,60-64,6,Male
+Incident of NMSC in 2006,0.52,60-64,4.53,Male
+Incident of NMSC in 2007,0,60-64,4.26,Male
+Incident of NMSC in 2008,0,60-64,5.61,Male
+Incident of NMSC in 2009,0.31,60-64,5,Male
+Incident of NMSC in 2010,0,60-64,5.63,Male
+Incident of NMSC in 2011,0,60-64,5.43,Male
+Incident of NMSC in 2012,0.2,60-64,5.96,Male
+Incident of NMSC in 2013,0.09,60-64,5.19,Male
+Incident of NMSC in 2014,0,60-64,5.74,Male
+Incident of NMSC in 2015,0.06,60-64,4.96,Male
+Incident of NMSC in 2016,0.2,60-64,5.34,Male
+Incident of NMSC in 2017,0,60-64,5.6,Male
+Incident of NMSC in 2018,0.07,60-64,5.73,Male
+Incident of NMSC in 2018,0-,60-64,60-64,Male
+pop,173406,60-64,1033942,Male
+case of NMSC in 2005,0,60-64,62.03652,Male
+pop,192243,60-64,1170392,Male
+case of NMSC in 2006,0.9996636,60-64,53.0187576,Male
+pop,214585,60-64,1222016,Male
+case of NMSC in 2007,0,60-64,52.0578816,Male
+pop,230304,60-64,1479943,Male
+case of NMSC in 2008,0,60-64,83.0248023,Male
+pop,327151,60-64,1961417,Male
+case of NMSC in 2009,1.0141681,60-64,98.07085,Male
+pop,553502,60-64,2912878,Male
+case of NMSC in 2010,0,60-64,163.9950314,Male
+pop,684618,60-64,3571886,Male
+case of NMSC in 2011,0,60-64,193.9534098,Male
+pop,994252,60-64,5083547,Male
+case of NMSC in 2012,1.988504,60-64,302.9794012,Male
+pop,1120183,60-64,6143354,Male
+case of NMSC in 2013,1.0081647,60-64,318.8400726,Male
+pop,1492182,60-64,8078525,Male
+case of NMSC in 2014,0,60-64,463.707335,Male
+pop,1603833,60-64,9374709,Male
+case of NMSC in 2015,0.9622998,60-64,464.9855664,Male
+pop,2027078,60-64,11431650,Male
+case of NMSC in 2016,4.054156,60-64,610.45011,Male
+pop,2465356,60-64,13250102,Male
+case of NMSC in 2017,0,60-64,742.005712,Male
+pop,2831943,60-64,15772987,Male
+case of NMSC in 2018,1.9823601,60-64,903.7921551,Male
+Incident of NMSC in 2005,0,65-69,7.16,Male
+Incident of NMSC in 2006,0.52,65-69,6.61,Male
+Incident of NMSC in 2007,0,65-69,6.69,Male
+Incident of NMSC in 2008,0,65-69,7.5,Male
+Incident of NMSC in 2009,0.31,65-69,6.52,Male
+Incident of NMSC in 2010,0,65-69,7.05,Male
+Incident of NMSC in 2011,0,65-69,7.42,Male
+Incident of NMSC in 2012,0.2,65-69,8.06,Male
+Incident of NMSC in 2013,0.09,65-69,7.21,Male
+Incident of NMSC in 2014,0,65-69,7.63,Male
+Incident of NMSC in 2015,0.06,65-69,7.71,Male
+Incident of NMSC in 2016,0.2,65-69,7.77,Male
+Incident of NMSC in 2017,0,65-69,7.86,Male
+Incident of NMSC in 2018,0.07,65-69,8.28,Male
+Incident of NMSC in 2018,0-,65-69,65-69,Male
+pop,173406,65-69,991763,Male
+case of NMSC in 2005,0,65-69,71.0102308,Male
+pop,192243,65-69,1058385,Male
+case of NMSC in 2006,0.9996636,65-69,69.9592485,Male
+pop,214585,65-69,1046599,Male
+case of NMSC in 2007,0,65-69,70.0174731,Male
+pop,230304,65-69,1133807,Male
+case of NMSC in 2008,0,65-69,85.035525,Male
+pop,327151,65-69,1458084,Male
+case of NMSC in 2009,1.0141681,65-69,95.0670768,Male
+pop,553502,65-69,2084787,Male
+case of NMSC in 2010,0,65-69,146.9774835,Male
+pop,684618,65-69,2534278,Male
+case of NMSC in 2011,0,65-69,188.0434276,Male
+pop,994252,65-69,3497777,Male
+case of NMSC in 2012,1.988504,65-69,281.9208262,Male
+pop,1120183,65-69,4176473,Male
+case of NMSC in 2013,1.0081647,65-69,301.1237033,Male
+pop,1492182,65-69,5558957,Male
+case of NMSC in 2014,0,65-69,424.1484191,Male
+pop,1603833,65-69,6514220,Male
+case of NMSC in 2015,0.9622998,65-69,502.246362,Male
+pop,2027078,65-69,8173167,Male
+case of NMSC in 2016,4.054156,65-69,635.0550759,Male
+pop,2465356,65-69,9698625,Male
+case of NMSC in 2017,0,65-69,762.311925,Male
+pop,2831943,65-69,12153174,Male
+case of NMSC in 2018,1.9823601,65-69,1006.2828072,Male
+Incident of NMSC in 2005,0,70-74,11.36,Male
+Incident of NMSC in 2006,0.52,70-74,13.11,Male
+Incident of NMSC in 2007,0,70-74,10.43,Male
+Incident of NMSC in 2008,0,70-74,14.54,Male
+Incident of NMSC in 2009,0.31,70-74,11.14,Male
+Incident of NMSC in 2010,0,70-74,10.96,Male
+Incident of NMSC in 2011,0,70-74,11.58,Male
+Incident of NMSC in 2012,0.2,70-74,9.81,Male
+Incident of NMSC in 2013,0.09,70-74,9.24,Male
+Incident of NMSC in 2014,0,70-74,10.6,Male
+Incident of NMSC in 2015,0.06,70-74,11.14,Male
+Incident of NMSC in 2016,0.2,70-74,10.45,Male
+Incident of NMSC in 2017,0,70-74,11.59,Male
+Incident of NMSC in 2018,0.07,70-74,12.14,Male
+Incident of NMSC in 2018,0-,70-74,70-74,Male
+pop,173406,70-74,853829,Male
+case of NMSC in 2005,0,70-74,96.9949744,Male
+pop,192243,70-74,930407,Male
+case of NMSC in 2006,0.9996636,70-74,121.9763577,Male
+pop,214585,70-74,939824,Male
+case of NMSC in 2007,0,70-74,98.0236432,Male
+pop,230304,70-74,1052543,Male
+case of NMSC in 2008,0,70-74,153.0397522,Male
+pop,327151,70-74,1256564,Male
+case of NMSC in 2009,1.0141681,70-74,139.9812296,Male
+pop,553502,70-74,1752290,Male
+case of NMSC in 2010,0,70-74,192.050984,Male
+pop,684618,70-74,2021534,Male
+case of NMSC in 2011,0,70-74,234.0936372,Male
+pop,994252,70-74,2692482,Male
+case of NMSC in 2012,1.988504,70-74,264.1324842,Male
+pop,1120183,70-74,3104989,Male
+case of NMSC in 2013,1.0081647,70-74,286.9009836,Male
+pop,1492182,70-74,3999592,Male
+case of NMSC in 2014,0,70-74,423.956752,Male
+pop,1603833,70-74,4665784,Male
+case of NMSC in 2015,0.9622998,70-74,519.7683376,Male
+pop,2027078,70-74,5655313,Male
+case of NMSC in 2016,4.054156,70-74,590.9802085,Male
+pop,2465356,70-74,6654237,Male
+case of NMSC in 2017,0,70-74,771.2260683,Male
+pop,2831943,70-74,8276466,Male
+case of NMSC in 2018,1.9823601,70-74,1004.7629724,Male
+Incident of NMSC in 2005,0,75-79,17.16,Male
+Incident of NMSC in 2006,0.52,75-79,18.14,Male
+Incident of NMSC in 2007,0,75-79,16.01,Male
+Incident of NMSC in 2008,0,75-79,17.67,Male
+Incident of NMSC in 2009,0.31,75-79,15.95,Male
+Incident of NMSC in 2010,0,75-79,13.93,Male
+Incident of NMSC in 2011,0,75-79,16.54,Male
+Incident of NMSC in 2012,0.2,75-79,15.71,Male
+Incident of NMSC in 2013,0.09,75-79,16.55,Male
+Incident of NMSC in 2014,0,75-79,14.96,Male
+Incident of NMSC in 2015,0.06,75-79,15.5,Male
+Incident of NMSC in 2016,0.2,75-79,15.94,Male
+Incident of NMSC in 2017,0,75-79,14.09,Male
+Incident of NMSC in 2018,0.07,75-79,16.24,Male
+Incident of NMSC in 2018,0-,75-79,75-79,Male
+pop,173406,75-79,536139,Male
+case of NMSC in 2005,0,75-79,92.0014524,Male
+pop,192243,75-79,589749,Male
+case of NMSC in 2006,0.9996636,75-79,106.9804686,Male
+pop,214585,75-79,612209,Male
+case of NMSC in 2007,0,75-79,98.0146609,Male
+pop,230304,75-79,752806,Male
+case of NMSC in 2008,0,75-79,133.0208202,Male
+pop,327151,75-79,933904,Male
+case of NMSC in 2009,1.0141681,75-79,148.957688,Male
+pop,553502,75-79,1327608,Male
+case of NMSC in 2010,0,75-79,184.9357944,Male
+pop,684618,75-79,1565530,Male
+case of NMSC in 2011,0,75-79,258.938662,Male
+pop,994252,75-79,2112988,Male
+case of NMSC in 2012,1.988504,75-79,331.9504148,Male
+pop,1120183,75-79,2441299,Male
+case of NMSC in 2013,1.0081647,75-79,404.0349845,Male
+pop,1492182,75-79,3121472,Male
+case of NMSC in 2014,0,75-79,466.9722112,Male
+pop,1603833,75-79,3483593,Male
+case of NMSC in 2015,0.9622998,75-79,539.956915,Male
+pop,2027078,75-79,4133505,Male
+case of NMSC in 2016,4.054156,75-79,658.880697,Male
+pop,2465356,75-79,4725730,Male
+case of NMSC in 2017,0,75-79,665.855357,Male
+pop,2831943,75-79,5682100,Male
+case of NMSC in 2018,1.9823601,75-79,922.77304,Male
+Incident of NMSC in 2005,0,80-84,20.03,Male
+Incident of NMSC in 2006,0.52,80-84,28.66,Male
+Incident of NMSC in 2007,0,80-84,23.84,Male
+Incident of NMSC in 2008,0,80-84,19.97,Male
+Incident of NMSC in 2009,0.31,80-84,22.57,Male
+Incident of NMSC in 2010,0,80-84,25.66,Male
+Incident of NMSC in 2011,0,80-84,24.48,Male
+Incident of NMSC in 2012,0.2,80-84,21.02,Male
+Incident of NMSC in 2013,0.09,80-84,21.56,Male
+Incident of NMSC in 2014,0,80-84,21.77,Male
+Incident of NMSC in 2015,0.06,80-84,19.71,Male
+Incident of NMSC in 2016,0.2,80-84,21.26,Male
+Incident of NMSC in 2017,0,80-84,23.58,Male
+Incident of NMSC in 2018,0.07,80-84,24.42,Male
+Incident of NMSC in 2018,0-,80-84,80-84,Male
+pop,173406,80-84,264557,Male
+case of NMSC in 2005,0,80-84,52.9907671,Male
+pop,192243,80-84,289644,Male
+case of NMSC in 2006,0.9996636,80-84,83.0119704,Male
+pop,214585,80-84,314649,Male
+case of NMSC in 2007,0,80-84,75.0123216,Male
+pop,230304,80-84,395524,Male
+case of NMSC in 2008,0,80-84,78.9861428,Male
+pop,327151,80-84,496334,Male
+case of NMSC in 2009,1.0141681,80-84,112.0225838,Male
+pop,553502,80-84,709356,Male
+case of NMSC in 2010,0,80-84,182.0207496,Male
+pop,684618,80-84,853731,Male
+case of NMSC in 2011,0,80-84,208.9933488,Male
+pop,994252,80-84,1189503,Male
+case of NMSC in 2012,1.988504,80-84,250.0335306,Male
+pop,1120183,80-84,1414709,Male
+case of NMSC in 2013,1.0081647,80-84,305.0112604,Male
+pop,1492182,80-84,1901893,Male
+case of NMSC in 2014,0,80-84,414.0421061,Male
+pop,1603833,80-84,2197248,Male
+case of NMSC in 2015,0.9622998,80-84,433.0775808,Male
+pop,2027078,80-84,2657823,Male
+case of NMSC in 2016,4.054156,80-84,565.0531698,Male
+pop,2465356,80-84,3027487,Male
+case of NMSC in 2017,0,80-84,713.8814346,Male
+pop,2831943,80-84,3644185,Male
+case of NMSC in 2018,1.9823601,80-84,889.909977,Male
+Incident of NMSC in 2005,0,85+,21.4,Male
+Incident of NMSC in 2006,0.52,85+,34.92,Male
+Incident of NMSC in 2007,0,85+,30.18,Male
+Incident of NMSC in 2008,0,85+,36.19,Male
+Incident of NMSC in 2009,0.31,85+,21.44,Male
+Incident of NMSC in 2010,0,85+,27.92,Male
+Incident of NMSC in 2011,0,85+,31.08,Male
+Incident of NMSC in 2012,0.2,85+,25.18,Male
+Incident of NMSC in 2013,0.09,85+,27.57,Male
+Incident of NMSC in 2014,0,85+,25.67,Male
+Incident of NMSC in 2015,0.06,85+,28.31,Male
+Incident of NMSC in 2016,0.2,85+,26.7,Male
+Incident of NMSC in 2017,0,85+,30.25,Male
+Incident of NMSC in 2018,0.07,85+,31.25,Male
+Incident of NMSC in 2018,0-,85+,85+,Male
+pop,173406,85+,130846,Male
+case of NMSC in 2005,0,85+,28.001044,Male
+pop,192243,85+,140329,Male
+case of NMSC in 2006,0.9996636,85+,49.0028868,Male
+pop,214585,85+,155744,Male
+case of NMSC in 2007,0,85+,47.0035392,Male
+pop,230304,85+,204464,Male
+case of NMSC in 2008,0,85+,73.9955216,Male
+pop,327151,85+,261225,Male
+case of NMSC in 2009,1.0141681,85+,56.00664,Male
+pop,553502,85+,365311,Male
+case of NMSC in 2010,0,85+,101.9948312,Male
+pop,684618,85+,437643,Male
+case of NMSC in 2011,0,85+,136.0194444,Male
+pop,994252,85+,631518,Male
+case of NMSC in 2012,1.988504,85+,159.0162324,Male
+pop,1120183,85+,776142,Male
+case of NMSC in 2013,1.0081647,85+,213.9823494,Male
+pop,1492182,85+,1090718,Male
+case of NMSC in 2014,0,85+,279.9873106,Male
+pop,1603833,85+,1334999,Male
+case of NMSC in 2015,0.9622998,85+,377.9382169,Male
+pop,2027078,85+,1621991,Male
+case of NMSC in 2016,4.054156,85+,433.071597,Male
+pop,2465356,85+,1834427,Male
+case of NMSC in 2017,0,85+,554.9141675,Male
+pop,2831943,85+,2259098,Male
+case of NMSC in 2018,1.9823601,85+,705.968125,Male
