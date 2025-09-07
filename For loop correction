@@ -1,0 +1,34 @@
+## For loops 
+
+In simple terms, a for loop functions by performing a certain operation for each number in a list. For loops are generally not used as much in R as in some other programming languages, but there are instances where they might be the most efficient method in dealing with certain types of data. For now, let's demonstrate the concept using an earlier example of a function:
+
+```{r}
+#making a for loop to convert temperatures from Celsius to Farenheit 
+tempc <- c(38.00, 38.37, 37.86, 38.45, 38.09)
+tempf <- c()
+
+for (i in 1:length(tempc)) {
+  tempf[i] <- tempc[i] * (9/5) + 32
+}
+
+tempf
+
+```
+
+
+Let's do another example. Say we want to make a for loop to calculate the incidence of influenza in a hypothetical population. 
+
+```{r}
+num_new_cases <- c(33, 121, 156, 325, 278, 194, 222, 98, 45, 187) 
+for ( i in 1:length(num_new_cases)) {
+  pop <- 500000
+  incidence[i] <- (num_new_cases[i]/pop) * 1000
+}
+
+incidence
+
+#this gives us the incidence rate per 1000 people!
+```
+
+
+In these examples, there are often simpler built in functions in R to get the same results. These were merely examples to demonstrate how a for loop functions: apply this command to every item in a vector. Examples where for loops are used regularly in epidemiology is for modeling the spread of an infectious disease in a susceptible population. We won't delve into these concepts as they go into detail beyond the scope of the course, but it is important to understand the basics of a for loop for future reference!
